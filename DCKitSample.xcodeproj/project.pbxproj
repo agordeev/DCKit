@@ -175,9 +175,9 @@
 			children = (
 				963636DA1AFCE38E00EF1F07 /* DCBaseTextField.swift */,
 				963636DB1AFCE38E00EF1F07 /* DCBorderedTextField.swift */,
+				963636DE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift */,
 				963636DC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift */,
 				963636DD1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift */,
-				963636DE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift */,
 				963636DF1AFCE38E00EF1F07 /* DCPickerTextField.swift */,
 			);
 			path = UITextFields;

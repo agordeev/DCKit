@@ -1,6 +1,6 @@
 //
 //  DCBaseButton.swift
-//  DesignableControlsKit
+//  DCKit
 //
 //  Created by Andrey Gordeev on 27/12/14.
 //  Copyright (c) 2014 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
@@ -59,6 +59,8 @@ public class DCBaseButton: UIButton {
         }
     }
     
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -71,14 +73,9 @@ public class DCBaseButton: UIButton {
         customInit()
     }
     
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        
-        customInit()
-    }
+    // MARK: - Build control
     
-    // MARK: - Build Button
-    
+    /// Overriden method must call super.customInit().
     public func customInit() {
         configureFont()
     }

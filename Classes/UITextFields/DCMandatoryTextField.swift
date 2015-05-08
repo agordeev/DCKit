@@ -1,6 +1,6 @@
 //
 //  BorderedTextField.swift
-//  DesignableControlsKit
+//  DCKit
 //
 //  Created by Andrey Gordeev on 16/02/15.
 //  Copyright (c) 2015 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
@@ -28,17 +28,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     @IBInspectable
     public var isMandatory: Bool = true
     
-    // IBDesignables require both of these inits
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    // MARK: - Build text field
+    // MARK: - Build control
     
     override public func customInit() {
         super.customInit()
@@ -51,11 +41,13 @@ public class DCMandatoryTextField: DCBorderedTextField {
         
     }
     
-    // MARK: - Misc
+    // MARK: - Validation
     
+    /// Checks if the field's value is valid. Can be overriden by subclasses.
+    /// :return: True, if the field is mandatory and value is not empty.
     public func isValid() -> Bool {
         if isMandatory {
-            var valid = (text ?? "") != ""
+            var valid = !(text ?? "").isEmpty
             selected = !valid
             return valid
         }
@@ -63,6 +55,8 @@ public class DCMandatoryTextField: DCBorderedTextField {
             return true
         }
     }
+    
+    // MARK: - Misc
     
     func updateColor() {
         layer.borderColor = selected ? highlightedBorderColor.CGColor : defaultBorderColor.CGColor

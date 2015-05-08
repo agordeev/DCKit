@@ -45,19 +45,7 @@ public class DCBorderedButton: DCBaseButton {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        customInit()
-    }
-    
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        customInit()
-    }
-    
-    // MARK: - Build Button
+    // MARK: - Build control
     
     override public func customInit() {
         super.customInit()
@@ -74,13 +62,6 @@ public class DCBorderedButton: DCBaseButton {
         layer.rasterizationScale = UIScreen.mainScreen().scale
         layer.shouldRasterize = true
     }
-    
-//    func setEnabledAnimated(enabled: Bool) {
-//        UIView.transitionWithView(self, duration: 0.3, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: { () -> Void in
-//            self.enabled = enabled
-//            layer.borderColor = aNewValue ? buttonColor().CGColor : disabledButtonColor().CGColor
-//        }, completion: nil)
-//    }
     
     // MARK: - Misc
     

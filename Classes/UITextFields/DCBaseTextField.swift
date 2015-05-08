@@ -1,6 +1,6 @@
 //
 //  BaseTextField.swift
-//  DesignableControlsKit
+//  DCKit
 //
 //  Created by Andrey Gordeev on 27/12/14.
 //  Copyright (c) 2014 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
@@ -28,6 +28,8 @@ public class DCBaseTextField: UITextField {
         }
     }
     
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -36,16 +38,13 @@ public class DCBaseTextField: UITextField {
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-    
-    override public func awakeFromNib() {
-        super.awakeFromNib()
         
         customInit()
     }
     
     // MARK: - Building TextField
     
+    /// Overriden method must call super.customInit().
     public func customInit() {
         configureFont()
         configureColor()

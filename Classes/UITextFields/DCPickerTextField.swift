@@ -1,6 +1,6 @@
 //
 //  PickerTextField.swift
-//  DesignableControlsKit
+//  DCKit
 //
 //  Created by Andrey Gordeev on 29/01/15.
 //  Copyright (c) 2015 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-// This text field can be user for UIDatePicker and UIPickerView
-// It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
+/// This text field can be used for UIDatePicker and UIPickerView.
+/// It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
 @IBDesignable
 public class DCPickerTextField: DCBorderedTextField {
     

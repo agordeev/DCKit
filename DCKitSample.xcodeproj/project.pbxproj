@@ -26,6 +26,8 @@
 		963636F11AFCE38E00EF1F07 /* DCBorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E31AFCE38E00EF1F07 /* DCBorderedView.swift */; };
 		963636F21AFCE38E00EF1F07 /* DCCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E41AFCE38E00EF1F07 /* DCCircleView.swift */; };
 		963636F31AFCE38E00EF1F07 /* DCHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E51AFCE38E00EF1F07 /* DCHairlineView.swift */; };
+		96D966031AFD01E9009130C1 /* DCPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D966021AFD01E9009130C1 /* DCPlaceholderTextView.swift */; };
+		96D966051AFD13AC009130C1 /* DCBorderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D966041AFD13AC009130C1 /* DCBorderedTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		963636E31AFCE38E00EF1F07 /* DCBorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBorderedView.swift; sourceTree = "<group>"; };
 		963636E41AFCE38E00EF1F07 /* DCCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCCircleView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		963636E51AFCE38E00EF1F07 /* DCHairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCHairlineView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		96D966021AFD01E9009130C1 /* DCPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCPlaceholderTextView.swift; sourceTree = "<group>"; };
+		96D966041AFD13AC009130C1 /* DCBorderedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBorderedTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				963636E11AFCE38E00EF1F07 /* DCBaseTextView.swift */,
+				96D966041AFD13AC009130C1 /* DCBorderedTextView.swift */,
+				96D966021AFD01E9009130C1 /* DCPlaceholderTextView.swift */,
 			);
 			path = UITextViews;
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 				963636F01AFCE38E00EF1F07 /* DCBaseTextView.swift in Sources */,
 				963636EE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift in Sources */,
 				963636F21AFCE38E00EF1F07 /* DCCircleView.swift in Sources */,
+				96D966031AFD01E9009130C1 /* DCPlaceholderTextView.swift in Sources */,
+				96D966051AFD13AC009130C1 /* DCBorderedTextView.swift in Sources */,
 				963636B21AFCE35500EF1F07 /* AppDelegate.swift in Sources */,
 				963636EA1AFCE38E00EF1F07 /* DCBaseTextField.swift in Sources */,
 				963636E91AFCE38E00EF1F07 /* DCBaseLabel.swift in Sources */,

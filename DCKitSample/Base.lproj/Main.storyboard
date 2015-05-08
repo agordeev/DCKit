@@ -16,14 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-Vy-dmG" customClass="DCBorderedTextField" customModule="DCKitSample" customModuleProvider="target">
-                                <rect key="frame" x="262" y="56" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-Vy-dmG" customClass="DCBorderedTextField" customModule="DCKitSample" customModuleProvider="target">
+                                <rect key="frame" x="80" y="56" width="440" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="k7w-z3-zq8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TxU-lw-dmA" customClass="DCPlaceholderTextView" customModule="DCKitSample" customModuleProvider="target">
+                                <rect key="frame" x="80" y="169" width="440" height="128"/>
+                                <color key="backgroundColor" red="0.86806126644736847" green="0.97829290021929816" blue="0.84264494243421051" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="f0M-0l-NAW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="s"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-Ix-hk6">
+                                <rect key="frame" x="277" y="323" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Pressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ykN-Sa-km6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rv-MW-KLC">
+                                <rect key="frame" x="277" y="372" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Pressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i6B-Hb-Tb7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JeP-Vy-dmG" secondAttribute="trailing" constant="80" id="5H6-AQ-6NS"/>
+                            <constraint firstItem="TxU-lw-dmA" firstAttribute="top" secondItem="JeP-Vy-dmG" secondAttribute="bottom" constant="82" id="GUX-KJ-V69"/>
+                            <constraint firstItem="1rv-MW-KLC" firstAttribute="top" secondItem="cNk-Ix-hk6" secondAttribute="bottom" constant="19" id="Q8r-n5-Yjk"/>
+                            <constraint firstItem="JeP-Vy-dmG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="36" id="RoZ-UL-tFo"/>
+                            <constraint firstAttribute="trailing" secondItem="TxU-lw-dmA" secondAttribute="trailing" constant="80" id="hfE-IK-h3O"/>
+                            <constraint firstItem="cNk-Ix-hk6" firstAttribute="top" secondItem="TxU-lw-dmA" secondAttribute="bottom" constant="26" id="lty-uu-J1T"/>
+                            <constraint firstItem="JeP-Vy-dmG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="80" id="ox5-2N-bLx"/>
+                            <constraint firstItem="TxU-lw-dmA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="80" id="qs5-wJ-c7w"/>
+                            <constraint firstItem="cNk-Ix-hk6" firstAttribute="centerX" secondItem="1rv-MW-KLC" secondAttribute="centerX" id="zEf-ci-3bE"/>
+                            <constraint firstItem="cNk-Ix-hk6" firstAttribute="centerX" secondItem="TxU-lw-dmA" secondAttribute="centerX" id="zVR-jt-kuG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="placeholderTextField" destination="TxU-lw-dmA" id="EGm-zt-HCn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

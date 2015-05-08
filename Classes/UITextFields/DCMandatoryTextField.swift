@@ -59,7 +59,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     // MARK: - Misc
     
     func updateColor() {
-        layer.borderColor = selected ? highlightedBorderColor.CGColor : defaultBorderColor.CGColor
+        layer.borderColor = selected ? highlightedBorderColor.CGColor : normalBorderColor.CGColor
     }
     
 }

@@ -12,9 +12,9 @@ import UIKit
 public class DCBorderedTextField: DCBaseTextField {
     
     @IBInspectable
-    public var defaultBorderColor: UIColor = UIColor.grayColor().colorWithAlphaComponent(0.4) {
+    public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
         didSet {
-            layer.borderColor = defaultBorderColor.CGColor
+            layer.borderColor = normalBorderColor.CGColor
         }
     }
     

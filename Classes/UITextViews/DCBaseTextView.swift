@@ -10,6 +10,14 @@ import UIKit
 
 public class DCBaseTextView: UITextView {
     
+    /// For some reasons setting tintColor from IB doesn't work, so we have to add a property for that
+    @IBInspectable
+    public var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
+        didSet {
+            tintColor = cursorColor
+        }
+    }
+    
     // MARK: - Initializers
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {

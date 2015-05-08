@@ -1,17 +1,17 @@
 //
-//  BaseTextView.swift
+//  BaseLabel.swift
 //  DesignableControlsKit
 //
-//  Created by Andrey Gordeev on 29/01/15.
+//  Created by Andrey Gordeev on 28/01/15.
 //  Copyright (c) 2015 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
 //
 
 import UIKit
 
-public class DCKBaseTextView: UITextView {
+public class DCBaseLabel: UILabel {
     
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
-        super.init(frame: frame, textContainer: nil)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         customInit()
     }
@@ -26,17 +26,17 @@ public class DCKBaseTextView: UITextView {
         customInit()
     }
     
-    // MARK: - Build Text View
+    // MARK: - Build Label
     
     public func customInit() {
         configureFont()
         configureColor()
     }
     
-    func configureFont() {
+    public func configureFont() {
     }
     
-    func configureColor() {
+    public func configureColor() {
     }
 
 }

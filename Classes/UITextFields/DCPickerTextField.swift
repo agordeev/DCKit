@@ -11,7 +11,7 @@ import UIKit
 // This text field can be user for UIDatePicker and UIPickerView
 // It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
 @IBDesignable
-public class DCKPickerTextField: DCKBorderedTextField {
+public class DCPickerTextField: DCBorderedTextField {
     
     // IBDesignables require both of these inits
     

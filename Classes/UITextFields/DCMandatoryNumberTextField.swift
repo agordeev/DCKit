@@ -1,15 +1,16 @@
 //
-//  MandatoryEmailTextField.swift
+//  MandatoryNumberTextField.swift
 //  DesignableControlsKit
 //
-//  Created by Andrey Gordeev on 02/03/15.
+//  Created by Andrey Gordeev on 11/03/15.
 //  Copyright (c) 2015 Andrey Gordeev (andrew8712@gmail.com). All rights reserved.
 //
 
 import UIKit
 
-@IBDesignable
-public class DCKMandatoryEmailTextField: DCKMandatoryTextField {
+public class DCMandatoryNumberTextField: DCMandatoryTextField {
+    
+    @IBInspectable public var maxValue: Float = 999
     
     // IBDesignables require both of these inits
     
@@ -21,8 +22,19 @@ public class DCKMandatoryEmailTextField: DCKMandatoryTextField {
         super.init(coder: aDecoder)
     }
     
+    // MARK: - Build text field
+    
+    override public func customInit() {
+        super.customInit()
+        keyboardType = UIKeyboardType.DecimalPad
+    }
+    
+    // MARK: - Validation
+    
     override public func isValid() -> Bool {
-        var valid = isValidEmail(text)
+        let value = (text as NSString).floatValue
+        
+        var valid = value < maxValue
         
         // If the field is Mandatory and empty - it's invalid
         if text == "" {
@@ -31,15 +43,6 @@ public class DCKMandatoryEmailTextField: DCKMandatoryTextField {
         
         selected = !valid
         return valid
-    }
-    
-    // MARK: - Validation
-    
-    /// Validates email
-    public func isValidEmail(email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(email)
     }
     
 }

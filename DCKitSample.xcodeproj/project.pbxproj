@@ -13,19 +13,19 @@
 		963636B91AFCE35500EF1F07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 963636B81AFCE35500EF1F07 /* Images.xcassets */; };
 		963636BC1AFCE35500EF1F07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963636BA1AFCE35500EF1F07 /* LaunchScreen.xib */; };
 		963636C81AFCE35500EF1F07 /* DCKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636C71AFCE35500EF1F07 /* DCKitSampleTests.swift */; };
-		963636E71AFCE38E00EF1F07 /* DCKBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D51AFCE38E00EF1F07 /* DCKBaseButton.swift */; };
-		963636E81AFCE38E00EF1F07 /* DCKBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D61AFCE38E00EF1F07 /* DCKBorderedButton.swift */; };
-		963636E91AFCE38E00EF1F07 /* DCKBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D81AFCE38E00EF1F07 /* DCKBaseLabel.swift */; };
-		963636EA1AFCE38E00EF1F07 /* DCKBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DA1AFCE38E00EF1F07 /* DCKBaseTextField.swift */; };
-		963636EB1AFCE38E00EF1F07 /* DCKBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DB1AFCE38E00EF1F07 /* DCKBorderedTextField.swift */; };
-		963636EC1AFCE38E00EF1F07 /* DCKMandatoryEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DC1AFCE38E00EF1F07 /* DCKMandatoryEmailTextField.swift */; };
-		963636ED1AFCE38E00EF1F07 /* DCKMandatoryNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DD1AFCE38E00EF1F07 /* DCKMandatoryNumberTextField.swift */; };
-		963636EE1AFCE38E00EF1F07 /* DCKMandatoryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DE1AFCE38E00EF1F07 /* DCKMandatoryTextField.swift */; };
-		963636EF1AFCE38E00EF1F07 /* DCKPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DF1AFCE38E00EF1F07 /* DCKPickerTextField.swift */; };
-		963636F01AFCE38E00EF1F07 /* DCKBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E11AFCE38E00EF1F07 /* DCKBaseTextView.swift */; };
-		963636F11AFCE38E00EF1F07 /* DCKBorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E31AFCE38E00EF1F07 /* DCKBorderedView.swift */; };
-		963636F21AFCE38E00EF1F07 /* DCKCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E41AFCE38E00EF1F07 /* DCKCircleView.swift */; };
-		963636F31AFCE38E00EF1F07 /* DCKHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E51AFCE38E00EF1F07 /* DCKHairlineView.swift */; };
+		963636E71AFCE38E00EF1F07 /* DCBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D51AFCE38E00EF1F07 /* DCBaseButton.swift */; };
+		963636E81AFCE38E00EF1F07 /* DCBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D61AFCE38E00EF1F07 /* DCBorderedButton.swift */; };
+		963636E91AFCE38E00EF1F07 /* DCBaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636D81AFCE38E00EF1F07 /* DCBaseLabel.swift */; };
+		963636EA1AFCE38E00EF1F07 /* DCBaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DA1AFCE38E00EF1F07 /* DCBaseTextField.swift */; };
+		963636EB1AFCE38E00EF1F07 /* DCBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DB1AFCE38E00EF1F07 /* DCBorderedTextField.swift */; };
+		963636EC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift */; };
+		963636ED1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DD1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift */; };
+		963636EE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift */; };
+		963636EF1AFCE38E00EF1F07 /* DCPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636DF1AFCE38E00EF1F07 /* DCPickerTextField.swift */; };
+		963636F01AFCE38E00EF1F07 /* DCBaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E11AFCE38E00EF1F07 /* DCBaseTextView.swift */; };
+		963636F11AFCE38E00EF1F07 /* DCBorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E31AFCE38E00EF1F07 /* DCBorderedView.swift */; };
+		963636F21AFCE38E00EF1F07 /* DCCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E41AFCE38E00EF1F07 /* DCCircleView.swift */; };
+		963636F31AFCE38E00EF1F07 /* DCHairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636E51AFCE38E00EF1F07 /* DCHairlineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,28 +41,28 @@
 /* Begin PBXFileReference section */
 		963636AC1AFCE35500EF1F07 /* DCKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963636B01AFCE35500EF1F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		963636B11AFCE35500EF1F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		963636B31AFCE35500EF1F07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		963636B11AFCE35500EF1F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636B31AFCE35500EF1F07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		963636B61AFCE35500EF1F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		963636B81AFCE35500EF1F07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		963636BB1AFCE35500EF1F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		963636C11AFCE35500EF1F07 /* DCKitSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCKitSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		963636C61AFCE35500EF1F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		963636C71AFCE35500EF1F07 /* DCKitSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCKitSampleTests.swift; sourceTree = "<group>"; };
+		963636C71AFCE35500EF1F07 /* DCKitSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCKitSampleTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		963636D21AFCE38E00EF1F07 /* DCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCKit.h; sourceTree = "<group>"; };
-		963636D51AFCE38E00EF1F07 /* DCKBaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBaseButton.swift; sourceTree = "<group>"; };
-		963636D61AFCE38E00EF1F07 /* DCKBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBorderedButton.swift; sourceTree = "<group>"; };
-		963636D81AFCE38E00EF1F07 /* DCKBaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBaseLabel.swift; sourceTree = "<group>"; };
-		963636DA1AFCE38E00EF1F07 /* DCKBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBaseTextField.swift; sourceTree = "<group>"; };
-		963636DB1AFCE38E00EF1F07 /* DCKBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBorderedTextField.swift; sourceTree = "<group>"; };
-		963636DC1AFCE38E00EF1F07 /* DCKMandatoryEmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKMandatoryEmailTextField.swift; sourceTree = "<group>"; };
-		963636DD1AFCE38E00EF1F07 /* DCKMandatoryNumberTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKMandatoryNumberTextField.swift; sourceTree = "<group>"; };
-		963636DE1AFCE38E00EF1F07 /* DCKMandatoryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKMandatoryTextField.swift; sourceTree = "<group>"; };
-		963636DF1AFCE38E00EF1F07 /* DCKPickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKPickerTextField.swift; sourceTree = "<group>"; };
-		963636E11AFCE38E00EF1F07 /* DCKBaseTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBaseTextView.swift; sourceTree = "<group>"; };
-		963636E31AFCE38E00EF1F07 /* DCKBorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKBorderedView.swift; sourceTree = "<group>"; };
-		963636E41AFCE38E00EF1F07 /* DCKCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKCircleView.swift; sourceTree = "<group>"; };
-		963636E51AFCE38E00EF1F07 /* DCKHairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCKHairlineView.swift; sourceTree = "<group>"; };
+		963636D51AFCE38E00EF1F07 /* DCBaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseButton.swift; sourceTree = "<group>"; };
+		963636D61AFCE38E00EF1F07 /* DCBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBorderedButton.swift; sourceTree = "<group>"; };
+		963636D81AFCE38E00EF1F07 /* DCBaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseLabel.swift; sourceTree = "<group>"; };
+		963636DA1AFCE38E00EF1F07 /* DCBaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseTextField.swift; sourceTree = "<group>"; };
+		963636DB1AFCE38E00EF1F07 /* DCBorderedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBorderedTextField.swift; sourceTree = "<group>"; };
+		963636DC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCMandatoryEmailTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636DD1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCMandatoryNumberTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636DE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCMandatoryTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636DF1AFCE38E00EF1F07 /* DCPickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCPickerTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636E11AFCE38E00EF1F07 /* DCBaseTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBaseTextView.swift; sourceTree = "<group>"; };
+		963636E31AFCE38E00EF1F07 /* DCBorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCBorderedView.swift; sourceTree = "<group>"; };
+		963636E41AFCE38E00EF1F07 /* DCCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCCircleView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		963636E51AFCE38E00EF1F07 /* DCHairlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = DCHairlineView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 		963636D41AFCE38E00EF1F07 /* UIButtons */ = {
 			isa = PBXGroup;
 			children = (
-				963636D51AFCE38E00EF1F07 /* DCKBaseButton.swift */,
-				963636D61AFCE38E00EF1F07 /* DCKBorderedButton.swift */,
+				963636D51AFCE38E00EF1F07 /* DCBaseButton.swift */,
+				963636D61AFCE38E00EF1F07 /* DCBorderedButton.swift */,
 			);
 			path = UIButtons;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 		963636D71AFCE38E00EF1F07 /* UILabels */ = {
 			isa = PBXGroup;
 			children = (
-				963636D81AFCE38E00EF1F07 /* DCKBaseLabel.swift */,
+				963636D81AFCE38E00EF1F07 /* DCBaseLabel.swift */,
 			);
 			path = UILabels;
 			sourceTree = "<group>";
@@ -173,12 +173,12 @@
 		963636D91AFCE38E00EF1F07 /* UITextFields */ = {
 			isa = PBXGroup;
 			children = (
-				963636DA1AFCE38E00EF1F07 /* DCKBaseTextField.swift */,
-				963636DB1AFCE38E00EF1F07 /* DCKBorderedTextField.swift */,
-				963636DC1AFCE38E00EF1F07 /* DCKMandatoryEmailTextField.swift */,
-				963636DD1AFCE38E00EF1F07 /* DCKMandatoryNumberTextField.swift */,
-				963636DE1AFCE38E00EF1F07 /* DCKMandatoryTextField.swift */,
-				963636DF1AFCE38E00EF1F07 /* DCKPickerTextField.swift */,
+				963636DA1AFCE38E00EF1F07 /* DCBaseTextField.swift */,
+				963636DB1AFCE38E00EF1F07 /* DCBorderedTextField.swift */,
+				963636DC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift */,
+				963636DD1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift */,
+				963636DE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift */,
+				963636DF1AFCE38E00EF1F07 /* DCPickerTextField.swift */,
 			);
 			path = UITextFields;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 		963636E01AFCE38E00EF1F07 /* UITextViews */ = {
 			isa = PBXGroup;
 			children = (
-				963636E11AFCE38E00EF1F07 /* DCKBaseTextView.swift */,
+				963636E11AFCE38E00EF1F07 /* DCBaseTextView.swift */,
 			);
 			path = UITextViews;
 			sourceTree = "<group>";
@@ -194,9 +194,9 @@
 		963636E21AFCE38E00EF1F07 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
-				963636E31AFCE38E00EF1F07 /* DCKBorderedView.swift */,
-				963636E41AFCE38E00EF1F07 /* DCKCircleView.swift */,
-				963636E51AFCE38E00EF1F07 /* DCKHairlineView.swift */,
+				963636E31AFCE38E00EF1F07 /* DCBorderedView.swift */,
+				963636E41AFCE38E00EF1F07 /* DCCircleView.swift */,
+				963636E51AFCE38E00EF1F07 /* DCHairlineView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -301,21 +301,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963636E71AFCE38E00EF1F07 /* DCKBaseButton.swift in Sources */,
+				963636E71AFCE38E00EF1F07 /* DCBaseButton.swift in Sources */,
 				963636B41AFCE35500EF1F07 /* ViewController.swift in Sources */,
-				963636F31AFCE38E00EF1F07 /* DCKHairlineView.swift in Sources */,
-				963636EF1AFCE38E00EF1F07 /* DCKPickerTextField.swift in Sources */,
-				963636EC1AFCE38E00EF1F07 /* DCKMandatoryEmailTextField.swift in Sources */,
-				963636EB1AFCE38E00EF1F07 /* DCKBorderedTextField.swift in Sources */,
-				963636F01AFCE38E00EF1F07 /* DCKBaseTextView.swift in Sources */,
-				963636EE1AFCE38E00EF1F07 /* DCKMandatoryTextField.swift in Sources */,
-				963636F21AFCE38E00EF1F07 /* DCKCircleView.swift in Sources */,
+				963636F31AFCE38E00EF1F07 /* DCHairlineView.swift in Sources */,
+				963636EF1AFCE38E00EF1F07 /* DCPickerTextField.swift in Sources */,
+				963636EC1AFCE38E00EF1F07 /* DCMandatoryEmailTextField.swift in Sources */,
+				963636EB1AFCE38E00EF1F07 /* DCBorderedTextField.swift in Sources */,
+				963636F01AFCE38E00EF1F07 /* DCBaseTextView.swift in Sources */,
+				963636EE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift in Sources */,
+				963636F21AFCE38E00EF1F07 /* DCCircleView.swift in Sources */,
 				963636B21AFCE35500EF1F07 /* AppDelegate.swift in Sources */,
-				963636EA1AFCE38E00EF1F07 /* DCKBaseTextField.swift in Sources */,
-				963636E91AFCE38E00EF1F07 /* DCKBaseLabel.swift in Sources */,
-				963636E81AFCE38E00EF1F07 /* DCKBorderedButton.swift in Sources */,
-				963636ED1AFCE38E00EF1F07 /* DCKMandatoryNumberTextField.swift in Sources */,
-				963636F11AFCE38E00EF1F07 /* DCKBorderedView.swift in Sources */,
+				963636EA1AFCE38E00EF1F07 /* DCBaseTextField.swift in Sources */,
+				963636E91AFCE38E00EF1F07 /* DCBaseLabel.swift in Sources */,
+				963636E81AFCE38E00EF1F07 /* DCBorderedButton.swift in Sources */,
+				963636ED1AFCE38E00EF1F07 /* DCMandatoryNumberTextField.swift in Sources */,
+				963636F11AFCE38E00EF1F07 /* DCBorderedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

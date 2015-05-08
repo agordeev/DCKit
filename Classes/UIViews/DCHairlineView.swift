@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKHairlineView: UIView {
+public class DCHairlineView: UIView {
     
     @IBInspectable public var borderColor: UIColor = UIColor.blackColor() {
         didSet {

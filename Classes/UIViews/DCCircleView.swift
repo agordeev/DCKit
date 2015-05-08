@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKCircleView: UIView {
+public class DCCircleView: UIView {
     
     override public func awakeFromNib() {
         super.awakeFromNib()

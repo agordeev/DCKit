@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKBorderedView: UIView {
+public class DCBorderedView: UIView {
     
     @IBInspectable public var borderColor: UIColor = UIColor.lightGrayColor() {
         didSet {

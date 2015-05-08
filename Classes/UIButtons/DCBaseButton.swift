@@ -1,5 +1,5 @@
 //
-//  DCKBaseButton.swift
+//  DCBaseButton.swift
 //  DesignableControlsKit
 //
 //  Created by Andrey Gordeev on 27/12/14.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKBaseButton: UIButton {
+public class DCBaseButton: UIButton {
     
     @IBInspectable public var normalTextColor: UIColor = UIColor.lightGrayColor() {
         didSet {

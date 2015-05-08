@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKBorderedTextField: DCKBaseTextField {
+public class DCBorderedTextField: DCBaseTextField {
     
     @IBInspectable
     public var defaultBorderColor: UIColor = UIColor.grayColor().colorWithAlphaComponent(0.4) {

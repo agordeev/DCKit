@@ -10,7 +10,7 @@ import UIKit
 
 /// Border is red if selected
 @IBDesignable
-public class DCKMandatoryTextField: DCKBorderedTextField {
+public class DCMandatoryTextField: DCBorderedTextField {
     
     override public var selected: Bool {
         didSet {

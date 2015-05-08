@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKBaseTextField: UITextField {
+public class DCBaseTextField: UITextField {
     
     @IBInspectable
     public var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCKBorderedButton: DCKBaseButton {
+public class DCBorderedButton: DCBaseButton {
     
     override public var enabled: Bool {
         didSet {

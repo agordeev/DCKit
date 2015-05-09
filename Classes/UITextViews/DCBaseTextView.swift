@@ -40,10 +40,10 @@ public class DCBaseTextView: UITextView {
         configureColor()
     }
     
-    func configureFont() {
+    public func configureFont() {
     }
     
-    func configureColor() {
+    public func configureColor() {
     }
 
 }

@@ -17,25 +17,25 @@ public class DCBorderedButton: DCBaseButton {
         }
     }
     
-    @IBInspectable var normalBorderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable var disabledBorderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGrayColor() {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+    @IBInspectable public var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }

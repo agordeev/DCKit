@@ -78,9 +78,13 @@ public class DCBaseButton: UIButton {
     /// Overriden method must call super.customInit().
     public func customInit() {
         configureFont()
+        configureColor()
     }
     
     public func configureFont() {
+    }
+    
+    public func configureColor() {
     }
     
     // MARK: - Misc

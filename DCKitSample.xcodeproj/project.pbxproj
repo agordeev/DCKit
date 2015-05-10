@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9621E0321AFF4E7D00E04FF1 /* DCRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9621E0311AFF4E7D00E04FF1 /* DCRoundedButton.swift */; };
 		963636B21AFCE35500EF1F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636B11AFCE35500EF1F07 /* AppDelegate.swift */; };
 		963636B41AFCE35500EF1F07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963636B31AFCE35500EF1F07 /* ViewController.swift */; };
 		963636B71AFCE35500EF1F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963636B51AFCE35500EF1F07 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9621E0311AFF4E7D00E04FF1 /* DCRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCRoundedButton.swift; sourceTree = "<group>"; };
 		963636AC1AFCE35500EF1F07 /* DCKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963636B01AFCE35500EF1F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		963636B11AFCE35500EF1F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -166,6 +168,7 @@
 			children = (
 				963636D51AFCE38E00EF1F07 /* DCBaseButton.swift */,
 				963636D61AFCE38E00EF1F07 /* DCBorderedButton.swift */,
+				9621E0311AFF4E7D00E04FF1 /* DCRoundedButton.swift */,
 			);
 			path = UIButtons;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				963636EE1AFCE38E00EF1F07 /* DCMandatoryTextField.swift in Sources */,
 				963636F21AFCE38E00EF1F07 /* DCCircleView.swift in Sources */,
 				96D966031AFD01E9009130C1 /* DCPlaceholderTextView.swift in Sources */,
+				9621E0321AFF4E7D00E04FF1 /* DCRoundedButton.swift in Sources */,
 				96D966051AFD13AC009130C1 /* DCBorderedTextView.swift in Sources */,
 				963636B21AFCE35500EF1F07 /* AppDelegate.swift in Sources */,
 				963636EA1AFCE38E00EF1F07 /* DCBaseTextField.swift in Sources */,

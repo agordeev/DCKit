@@ -45,5 +45,17 @@ public class DCBaseTextView: UITextView {
     
     public func configureColor() {
     }
+    
+    /// Adds toolbar with Done button, which dismisses the keyboard.
+    public func addToolbar() {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
+            target: nil, action: nil)
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .Done,
+            target: self, action: Selector("endEditing:"))
+        keyboardToolbar.items = [flexBarButton, doneBarButton]
+        inputAccessoryView = keyboardToolbar
+    }
 
 }

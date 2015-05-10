@@ -53,15 +53,12 @@ public class DCBaseTextField: UITextField {
     }
     
     public func configureFont() {
-        // Put the code here if you want to customize all text fields in the app
     }
     
     public func configureColor() {
-        // Put the code here if you want to customize all text fields in the app
     }
     
     public func configurePlaceholder() {
-        // Put the code here if you want to customize all text fields in the app
     }
     
     /// Adds toolbar with Done button, which dismisses the keyboard.

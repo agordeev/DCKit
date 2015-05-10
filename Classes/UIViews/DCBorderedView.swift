@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-public class DCBorderedView: UIView {
+public class DCBorderedView: DCBaseView {
     
     @IBInspectable public var borderColor: UIColor = UIColor.lightGrayColor() {
         didSet {
@@ -27,24 +27,11 @@ public class DCBorderedView: UIView {
         }
     }
     
-    // MARK: - Initializers
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        customInit()
-    }
-    
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        customInit()
-    }
-    
     // MARK: - Build control
     
-    /// Overriden method must call super.customInit().
-    public func customInit() {
+    override public func customInit() {
+        super.customInit()
+        
         addBorder()
     }
     

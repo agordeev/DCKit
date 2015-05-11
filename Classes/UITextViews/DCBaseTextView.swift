@@ -38,6 +38,7 @@ public class DCBaseTextView: UITextView {
     public func customInit() {
         configureFont()
         configureColor()
+        addToolbar()
     }
     
     public func configureFont() {

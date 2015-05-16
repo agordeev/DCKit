@@ -20,7 +20,7 @@ public class DCBaseTextView: UITextView {
     
     // MARK: - Initializers
     
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: nil)
         
         customInit()

@@ -13,9 +13,12 @@ import UIKit
 @IBDesignable
 public class DCPickerTextField: DCBorderedTextField {
     
-    // IBDesignables require both of these inits
+    // MARK: - Initializers
     
-    override init(frame: CGRect) {
+    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
+    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
+    
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
@@ -23,7 +26,7 @@ public class DCPickerTextField: DCBorderedTextField {
         super.init(coder: aDecoder)
     }
     
-    // MARK: - Building TextField
+    // MARK: - Building control
     
     override public func customInit() {
         super.customInit()

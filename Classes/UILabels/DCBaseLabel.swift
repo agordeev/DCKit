@@ -12,16 +12,15 @@ public class DCBaseLabel: UILabel {
     
     // MARK: - Initializers
     
-    override init(frame: CGRect) {
+    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
+    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
+    
+    override public init(frame: CGRect) {
         super.init(frame: frame)
-        
-        customInit()
     }
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        customInit()
     }
     
     // MARK: - Build control

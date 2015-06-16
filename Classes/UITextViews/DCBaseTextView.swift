@@ -18,6 +18,17 @@ public class DCBaseTextView: UITextView {
         }
     }
     
+    /// Shows whether we should show the toolbar with Done button of not.
+    @IBInspectable
+    public var showToolbar: Bool = true {
+        didSet {
+            inputAccessoryView = showToolbar ? keyboardToolbar : nil
+        }
+    }
+    
+    /// The toolbar with Done button.
+    private var keyboardToolbar = UIToolbar()
+    
     // MARK: - Initializers
     
     override public init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -49,7 +60,7 @@ public class DCBaseTextView: UITextView {
     
     /// Adds toolbar with Done button, which dismisses the keyboard.
     public func addToolbar() {
-        let keyboardToolbar = UIToolbar()
+        keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
             target: nil, action: nil)

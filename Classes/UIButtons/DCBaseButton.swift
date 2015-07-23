@@ -59,6 +59,12 @@ public class DCBaseButton: UIButton {
         }
     }
     
+    override public var selected: Bool {
+        didSet {
+            updateColor()
+        }
+    }
+    
     // MARK: - Initializers
     
     override public init(frame: CGRect) {

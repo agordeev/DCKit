@@ -21,7 +21,7 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
         super.init(frame: frame)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -35,7 +35,7 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
     // MARK: - Validation
     
     override public func isValid() -> Bool {
-        let value = (text as NSString).floatValue
+        let value = (text ?? "" as NSString).floatValue
         
         var valid = value < maxValue
         

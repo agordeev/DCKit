@@ -15,7 +15,7 @@ public class DCBaseTextField: UITextField {
     public var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
         didSet {
             if let placeholder = placeholder {
-                attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font])
+                attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font!])
             }
         }
     }
@@ -36,7 +36,7 @@ public class DCBaseTextField: UITextField {
         customInit()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         customInit()

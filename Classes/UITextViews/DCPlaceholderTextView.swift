@@ -19,7 +19,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
                 return
             }
             
-            let attributes = NSMutableDictionary()
+            var attributes = [String : AnyObject]()
             // This was in the original SAMTextView, but I really don't understand, why this is needed.
             // This makes placeholder appear as entered text, which seems wrong, so I commented it out.
 //            if isFirstResponder() && (typingAttributes != nil) {
@@ -36,7 +36,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
                 attributes[NSParagraphStyleAttributeName] = paragraph
             }
             
-            attributedPlaceholder = NSAttributedString(string: newValue ?? "", attributes: attributes as [NSObject : AnyObject])
+            attributedPlaceholder = NSAttributedString(string: newValue ?? "", attributes: attributes)
         }
         get {
             return self.attributedPlaceholder?.string
@@ -68,7 +68,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
         }
     }
     
-    override public var font: UIFont! {
+    override public var font: UIFont? {
         didSet {
             setNeedsDisplay()
         }
@@ -89,7 +89,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
         super.init(frame: frame, textContainer: textContainer)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

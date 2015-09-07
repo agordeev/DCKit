@@ -46,7 +46,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
         super.init(frame: frame)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -62,7 +62,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     /// :return: True, if the field is mandatory and value is not empty.
     public func isValid() -> Bool {
         if isMandatory {
-            var valid = !(text ?? "").isEmpty
+            let valid = !(text ?? "").isEmpty
             selected = !valid
             return valid
         }

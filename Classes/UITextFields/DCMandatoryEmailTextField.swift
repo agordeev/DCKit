@@ -20,14 +20,14 @@ public class DCMandatoryEmailTextField: DCMandatoryTextField {
         super.init(frame: frame)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     // MARK: - Validation
     
     override public func isValid() -> Bool {
-        var valid = isValidEmail(text)
+        var valid = isValidEmail(text ?? "")
         
         // If the field is Mandatory and empty - it's invalid
         if text == "" {

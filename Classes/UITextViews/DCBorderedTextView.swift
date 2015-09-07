@@ -39,7 +39,7 @@ public class DCBorderedTextView: DCBaseTextView {
         super.init(frame: frame, textContainer: textContainer)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 

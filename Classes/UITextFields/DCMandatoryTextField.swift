@@ -59,6 +59,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     // MARK: - Validation
     
     /// Checks if the field's value is valid. Can be overriden by subclasses.
+    ///
     /// :return: True, if the field is mandatory and value is not empty.
     public func isValid() -> Bool {
         if isMandatory {

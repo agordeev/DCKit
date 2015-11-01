@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "DCKit"
-  s.version     = "0.1.0"
+  s.version     = "1.0.0"
   s.summary     = "Set of iOS controls, which have useful IBInspectable properties. Written on Swift."
   s.homepage    = "https://github.com/andrew8712/DCKit"
   s.license     = { :type => "MIT" }

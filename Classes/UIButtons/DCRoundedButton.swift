@@ -9,29 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class DCRoundedButton: DCBaseButton {
+public class DCRoundedButton: DCBorderedButton {
     
-    override public var enabled: Bool {
-        didSet {
-            updateColor()
+    /// cornerRadius doesn't work for this control. It's strictly set to frame.size.height*0.5
+    override public var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
         }
-    }
-    
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
-        didSet {
-            updateColor()
-        }
-    }
-    
-    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGrayColor() {
-        didSet {
-            updateColor()
-        }
-    }
-    
-    @IBInspectable public var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
-        didSet {
-            updateColor()
+        set {
         }
     }
     
@@ -48,6 +33,14 @@ public class DCRoundedButton: DCBaseButton {
         super.init(coder: aDecoder)
     }
     
+    // MARK: - Life cycle
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        setCornerRadius()
+    }
+    
     // MARK: - Build control
     
     override public func customInit() {
@@ -56,16 +49,20 @@ public class DCRoundedButton: DCBaseButton {
         addBorder()
     }
     
-    public func addBorder() {
+    override public func addBorder() {
         layer.borderColor = normalBorderColor.CGColor
         layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
-        layer.cornerRadius = frame.size.height*0.5
+        setCornerRadius()
         clipsToBounds = true
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
-        layer.masksToBounds = false
+        layer.masksToBounds = true
         layer.rasterizationScale = UIScreen.mainScreen().scale
         layer.shouldRasterize = true
+    }
+    
+    private func setCornerRadius() {
+        layer.cornerRadius = frame.size.height*0.5
     }
     
     // MARK: - Misc

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This view can be used as a thin/thick separator line between views.
 @IBDesignable
 public class DCHairlineView: UIView {
     
@@ -22,6 +23,15 @@ public class DCHairlineView: UIView {
         didSet {
             layer.borderWidth = (borderWidth / UIScreen.mainScreen().scale) / 2.0
         }
+    }
+    
+    // MARK: - Life cycle
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.borderWidth = (borderWidth / UIScreen.mainScreen().scale) / 2.0
+        layer.borderColor = borderColor.CGColor
     }
 
 }

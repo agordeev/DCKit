@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// This field is also checks if the entered value is a valid email address.
 @IBDesignable
 public class DCMandatoryEmailTextField: DCMandatoryTextField {
     

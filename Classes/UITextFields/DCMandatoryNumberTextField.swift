@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Allows to set a max possible value.
 public class DCMandatoryNumberTextField: DCMandatoryTextField {
     
     @IBInspectable public var maxValue: Float = 999

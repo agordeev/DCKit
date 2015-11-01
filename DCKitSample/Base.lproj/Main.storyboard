@@ -379,5 +379,31 @@ view</string>
             </objects>
             <point key="canvasLocation" x="535.5" y="217"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lvN-hK-dxa">
+            <objects>
+                <viewController id="rpm-HN-vsN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UxX-3u-bNo"/>
+                        <viewControllerLayoutGuide type="bottom" id="lGT-oP-nbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fCw-Aa-Tx7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W89-z1-25Q" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
+                                <rect key="frame" x="277" y="97" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45E-bs-aIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="-57"/>
+        </scene>
     </scenes>
 </document>

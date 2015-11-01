@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Border is red if selected
+/// Highlights the text field if the entered value is false.
 @IBDesignable
 public class DCMandatoryTextField: DCBorderedTextField {
     
@@ -35,6 +35,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
         
         updateColor()
         isValid()
+        self.addTarget(self, action: Selector("isValid"), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     // MARK: - Initializers

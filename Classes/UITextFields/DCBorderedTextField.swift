@@ -58,9 +58,6 @@ public class DCBorderedTextField: DCBaseTextField {
         layer.masksToBounds = false
         layer.rasterizationScale = UIScreen.mainScreen().scale
         layer.shouldRasterize = true
-        
-        
-        self.addTarget(self, action: Selector("isValid"), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     override public func textRectForBounds(bounds: CGRect) -> CGRect {

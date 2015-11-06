@@ -35,9 +35,9 @@ Please download the [latest code version](https://github.com/andrew8712/DCKit/ar
 
 ## Documentation
 
-Basically, all of the classes are pretty straightforward and doesn't worth describing. Most of them you can see in the demo project.
+Basically, all of the classes are pretty straightforward and don't worth describing. Most of them you can see in the demo project.
 
-I'll describe few classes here though.
+I'll describe a few of them here though.
 
 #### DCHairlineView
 

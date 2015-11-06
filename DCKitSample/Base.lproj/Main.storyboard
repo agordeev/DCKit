@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-08-6FW">
                                 <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orv-fl-w6j" userLabel="UIButtons View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Orv-fl-w6j" userLabel="UIButtons View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIButtons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-E3-vGb">
@@ -47,7 +47,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="107" y="98" width="160" height="40"/>
                                                 <animations/>
                                                 <state key="normal" title="Bordered Button">
@@ -63,9 +63,7 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="O89-Mq-UHG" firstAttribute="width" secondItem="P3f-nm-Qeo" secondAttribute="width" id="11I-xY-cew"/>
                                             <constraint firstItem="TpO-E3-vGb" firstAttribute="top" secondItem="Orv-fl-w6j" secondAttribute="top" id="1YX-fS-Unp"/>
-                                            <constraint firstItem="O89-Mq-UHG" firstAttribute="height" secondItem="P3f-nm-Qeo" secondAttribute="height" id="Aef-Zm-n5M"/>
                                             <constraint firstAttribute="trailing" secondItem="TpO-E3-vGb" secondAttribute="trailing" constant="8" id="Df2-x2-9Hz"/>
                                             <constraint firstItem="O89-Mq-UHG" firstAttribute="top" secondItem="P3f-nm-Qeo" secondAttribute="bottom" constant="19" id="Lw3-uh-Kgg"/>
                                             <constraint firstAttribute="bottom" secondItem="O89-Mq-UHG" secondAttribute="bottom" constant="16" id="Mpx-ZF-C22"/>
@@ -75,7 +73,7 @@
                                             <constraint firstItem="P3f-nm-Qeo" firstAttribute="centerX" secondItem="Orv-fl-w6j" secondAttribute="centerX" id="uEn-mj-wKC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-86-ip9" userLabel="UITextFields View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-86-ip9" userLabel="UITextFields View">
                                         <rect key="frame" x="0.0" y="154" width="375" height="219"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextFields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcT-hH-mBK">
@@ -110,7 +108,7 @@
                                                     <constraint firstAttribute="height" constant="31" id="NeD-ve-2Tl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory number text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-Yy-Wy9" customClass="DCMandatoryNumberTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="172" width="295" height="31"/>
@@ -143,7 +141,7 @@
                                             <constraint firstItem="DKQ-LX-B6C" firstAttribute="leading" secondItem="wih-Nd-eBz" secondAttribute="leading" id="u6e-kj-s5N"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Our-tz-wm6" userLabel="UITextViews View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Our-tz-wm6" userLabel="UITextViews View">
                                         <rect key="frame" x="0.0" y="373" width="375" height="183"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-fZ-pA2">
@@ -206,7 +204,7 @@
                                             <constraint firstAttribute="trailing" secondItem="9Gk-m0-fh6" secondAttribute="trailing" constant="40" id="ziB-RP-I5U"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Qu-0bx" userLabel="UIViews View">
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Qu-0bx" userLabel="UIViews View">
                                         <rect key="frame" x="0.0" y="556" width="375" height="299.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Hd-Dg0">
@@ -378,32 +376,6 @@ view</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycc-Xi-Paz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="535.5" y="217"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="lvN-hK-dxa">
-            <objects>
-                <viewController id="rpm-HN-vsN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UxX-3u-bNo"/>
-                        <viewControllerLayoutGuide type="bottom" id="lGT-oP-nbA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fCw-Aa-Tx7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W89-z1-25Q" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
-                                <rect key="frame" x="277" y="97" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="45E-bs-aIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1082" y="-57"/>
         </scene>
     </scenes>
 </document>

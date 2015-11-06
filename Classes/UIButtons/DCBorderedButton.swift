@@ -45,6 +45,13 @@ public class DCBorderedButton: DCBaseButton {
         }
     }
     
+    @IBInspectable
+    public var borderWidth: CGFloat = 1.0 {
+        didSet {
+            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+        }
+    }
+    
     // MARK: - Initializers
     
     // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
@@ -68,7 +75,7 @@ public class DCBorderedButton: DCBaseButton {
     
     public func addBorder() {
         layer.borderColor = normalBorderColor.CGColor
-        layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+        borderWidth = 1.0
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = false

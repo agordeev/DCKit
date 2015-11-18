@@ -12,26 +12,21 @@ import UIKit
 @IBDesignable
 public class DCHairlineView: UIView {
     
-    @IBInspectable public var borderColor: UIColor = UIColor.blackColor() {
-        didSet {
-            layer.borderColor = borderColor.CGColor
-            backgroundColor = UIColor.clearColor()
-        }
-    }
+    /// A color of the line. Don't use background color.
+    @IBInspectable public var color: UIColor = UIColor.blackColor()
     
-    @IBInspectable public var borderWidth: CGFloat = 1.0 {
-        didSet {
-            layer.borderWidth = (borderWidth / UIScreen.mainScreen().scale) / 2.0
-        }
-    }
+    /// A width/height of the line.
+    @IBInspectable public var width: CGFloat = 1.0
     
     // MARK: - Life cycle
     
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        layer.borderWidth = (borderWidth / UIScreen.mainScreen().scale) / 2.0
-        layer.borderColor = borderColor.CGColor
+    public override func drawRect(rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
+        CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
+        CGContextSetStrokeColorWithColor(context, color.CGColor );
+        CGContextSetLineWidth(context, width / UIScreen.mainScreen().scale);
+        CGContextStrokePath(context);
     }
 
 }

@@ -26,16 +26,16 @@ public class DCHairlineView: UIView {
     public override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         if horizontal {
-            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
-            CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect));
+            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect))
+            CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect))
         }
         else {
-            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
-            CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
+            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect))
+            CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect))
         }
-        CGContextSetStrokeColorWithColor(context, color.CGColor );
-        CGContextSetLineWidth(context, width / UIScreen.mainScreen().scale);
-        CGContextStrokePath(context);
+        CGContextSetStrokeColorWithColor(context, color.CGColor )
+        CGContextSetLineWidth(context, width / UIScreen.mainScreen().scale)
+        CGContextStrokePath(context)
     }
 
 }

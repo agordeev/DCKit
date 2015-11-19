@@ -18,12 +18,21 @@ public class DCHairlineView: UIView {
     /// A width/height of the line.
     @IBInspectable public var width: CGFloat = 1.0
     
+    /// True if we want to draw the horizontal line. False for vertical line.
+    @IBInspectable public var horizontal: Bool = true
+    
     // MARK: - Life cycle
     
     public override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
-        CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMinY(rect));
+        if horizontal {
+            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
+            CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect));
+        }
+        else {
+            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect));
+            CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect));
+        }
         CGContextSetStrokeColorWithColor(context, color.CGColor );
         CGContextSetLineWidth(context, width / UIScreen.mainScreen().scale);
         CGContextStrokePath(context);

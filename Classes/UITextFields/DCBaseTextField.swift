@@ -28,6 +28,15 @@ public class DCBaseTextField: UITextField {
         }
     }
     
+    @IBInspectable
+    public var showDoneButton: Bool = true {
+        didSet {
+            inputAccessoryView = showDoneButton ? keyboardToolbar : nil
+        }
+    }
+    
+    private let keyboardToolbar = UIToolbar()
+    
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -49,7 +58,7 @@ public class DCBaseTextField: UITextField {
         configureFont()
         configureColor()
         configurePlaceholder()
-        addToolbar()
+        configureToolbar()
     }
     
     public func configureFont() {
@@ -62,8 +71,7 @@ public class DCBaseTextField: UITextField {
     }
     
     /// Adds toolbar with Done button, which dismisses the keyboard.
-    public func addToolbar() {
-        let keyboardToolbar = UIToolbar()
+    public func configureToolbar() {
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
             target: nil, action: nil)

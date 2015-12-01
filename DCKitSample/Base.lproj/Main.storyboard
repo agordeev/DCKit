@@ -100,6 +100,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showDoneButton" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory email text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-LX-B6C" customClass="DCMandatoryEmailTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="125" width="295" height="31"/>

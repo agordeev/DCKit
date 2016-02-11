@@ -9,7 +9,7 @@ Written on Swift 2.1.
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 [CocoaPods](http://www.cocoapods.org) recommended to use DCKit.
 

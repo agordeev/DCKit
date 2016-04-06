@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0dB-Sc-Mhj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0dB-Sc-Mhj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -26,14 +26,12 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIButtons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-E3-vGb">
                                                 <rect key="frame" x="8" y="0.0" width="359" height="23"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-nm-Qeo" customClass="DCRoundedButton" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="107" y="39" width="160" height="40"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="BPg-R4-Frj"/>
                                                     <constraint firstAttribute="height" constant="40" id="U0Y-3i-DSR"/>
@@ -49,7 +47,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="107" y="98" width="160" height="40"/>
-                                                <animations/>
                                                 <state key="normal" title="Bordered Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -60,7 +57,6 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="TpO-E3-vGb" firstAttribute="top" secondItem="Orv-fl-w6j" secondAttribute="top" id="1YX-fS-Unp"/>
@@ -78,14 +74,12 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextFields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcT-hH-mBK">
                                                 <rect key="frame" x="8" y="0.0" width="359" height="23"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bordered text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-fC-W00" customClass="DCBorderedTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="31" width="295" height="31"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="ef2-6H-xoQ"/>
                                                 </constraints>
@@ -94,7 +88,6 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Nd-eBz" customClass="DCMandatoryTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="78" width="295" height="31"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="IVS-d3-5wq"/>
                                                 </constraints>
@@ -106,7 +99,6 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory email text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-LX-B6C" customClass="DCMandatoryEmailTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="125" width="295" height="31"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="NeD-ve-2Tl"/>
                                                 </constraints>
@@ -115,7 +107,6 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory number text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-Yy-Wy9" customClass="DCMandatoryNumberTextField" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="172" width="295" height="31"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="hPt-kn-Nmt"/>
                                                 </constraints>
@@ -123,7 +114,6 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="eAf-Yy-Wy9" firstAttribute="leading" secondItem="DKQ-LX-B6C" secondAttribute="leading" id="034-aU-Iqa"/>
@@ -149,14 +139,12 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-fZ-pA2">
                                                 <rect key="frame" x="8" y="0.0" width="359" height="23"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-m0-fh6" customClass="DCPlaceholderTextView" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="31" width="295" height="60"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="6v5-SD-VJ9"/>
@@ -172,7 +160,6 @@
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bordered text view" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-vn-0dn" customClass="DCBorderedTextView" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="107" width="295" height="60"/>
-                                                <animations/>
                                                 <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="QWy-fi-X7d"/>
@@ -192,7 +179,6 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="gAw-vn-0dn" firstAttribute="leading" secondItem="Our-tz-wm6" secondAttribute="leading" constant="40" id="Ecd-db-jWV"/>
@@ -212,7 +198,6 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Hd-Dg0">
                                                 <rect key="frame" x="8" y="0.0" width="359" height="23"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -222,13 +207,11 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bordered view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-5T-ATg">
                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
-                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="bQH-5T-ATg" firstAttribute="leading" secondItem="o4B-fZ-WLa" secondAttribute="leading" id="P4D-d5-Vng"/>
@@ -251,13 +234,11 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashed view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88q-9P-4Aa">
                                                         <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
-                                                        <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="88q-9P-4Aa" secondAttribute="trailing" id="7Xg-uM-1dA"/>
@@ -286,7 +267,6 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-cp-Nnq">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                        <animations/>
                                                         <string key="text">Circle 
 view</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -294,7 +274,6 @@ view</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Cmf-cp-Nnq" secondAttribute="bottom" id="AdV-um-FpV"/>
@@ -307,21 +286,18 @@ view</string>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hairline view:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-dg-hMI">
                                                 <rect key="frame" x="40" y="259" width="295" height="20.5"/>
-                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-NM-a1v" customClass="DCHairlineView" customModule="DCKitSample" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="282.5" width="375" height="1"/>
-                                                <animations/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="9bH-CR-GHP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="fCh-rt-Uw9" secondAttribute="trailing" constant="40" id="4Qa-pC-Wcf"/>
@@ -345,7 +321,6 @@ view</string>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="Our-tz-wm6" firstAttribute="top" secondItem="o9A-86-ip9" secondAttribute="bottom" id="3dE-D3-paT"/>
                                     <constraint firstItem="mlw-Qu-0bx" firstAttribute="leading" secondItem="HmE-08-6FW" secondAttribute="leading" id="4F1-1e-PaX"/>
@@ -364,7 +339,6 @@ view</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HmE-08-6FW" secondAttribute="trailing" id="6Ji-oA-sLh"/>

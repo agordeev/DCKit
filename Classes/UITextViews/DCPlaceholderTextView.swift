@@ -119,7 +119,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     public override func customInit() {
         super.customInit()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textChanged"), name: UITextViewTextDidChangeNotification, object: self)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: UITextViewTextDidChangeNotification, object: self)
     }
     
     // MARK: - Misc

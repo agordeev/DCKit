@@ -35,7 +35,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
         
         updateColor()
         isValid()
-        self.addTarget(self, action: Selector("isValid"), forControlEvents: UIControlEvents.EditingChanged)
+        self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     // MARK: - Initializers

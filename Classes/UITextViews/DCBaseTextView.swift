@@ -65,7 +65,7 @@ public class DCBaseTextView: UITextView {
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
             target: nil, action: nil)
         let doneBarButton = UIBarButtonItem(barButtonSystemItem: .Done,
-            target: self, action: Selector("endEditing:"))
+            target: self, action: #selector(UIView.endEditing(_:)))
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         inputAccessoryView = keyboardToolbar
     }

@@ -27,6 +27,13 @@ public class DCBorderedView: DCBaseView {
         }
     }
     
+    @IBInspectable
+    public var borderWidth: CGFloat = 1.0 {
+        didSet {
+            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+        }
+    }
+    
     // MARK: - Build control
     
     override public func customInit() {
@@ -37,7 +44,7 @@ public class DCBorderedView: DCBaseView {
     
     public func addBorder() {
         layer.borderColor = borderColor.CGColor
-        layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+        layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = true

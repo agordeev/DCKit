@@ -1,0 +1,3 @@
+language: objective-c
+script:
+- xcodebuild clean build test -project DCKitSample.xcodeproj -scheme DCKitSample

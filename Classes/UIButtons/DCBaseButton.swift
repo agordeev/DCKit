@@ -52,7 +52,13 @@ public class DCBaseButton: UIButton {
             updateColor()
         }
     }
-    
+	
+	@IBInspectable public var highlightedBackgroundColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+		didSet {
+			updateColor()
+		}
+	}
+	
     override public var enabled: Bool {
         didSet {
             updateColor()
@@ -64,7 +70,13 @@ public class DCBaseButton: UIButton {
             updateColor()
         }
     }
-    
+	
+	override public var highlighted: Bool {
+		didSet {
+			updateColor()
+		}
+	}
+	
     // MARK: - Initializers
     
     override public init(frame: CGRect) {
@@ -96,7 +108,15 @@ public class DCBaseButton: UIButton {
     // MARK: - Misc
     
     public func updateColor() {
-        backgroundColor = enabled ? (selected ? selectedBackgroundColor : normalBackgroundColor) : disabledBackgroundColor
+		if (enabled==false){
+			backgroundColor = disabledBackgroundColor
+		} else if (selected==true){
+			backgroundColor = selectedBackgroundColor
+		} else if (highlighted==true){
+			backgroundColor = highlightedBackgroundColor
+		} else {
+			backgroundColor = normalBackgroundColor
+		}
     }
     
 }

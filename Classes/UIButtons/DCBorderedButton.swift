@@ -34,7 +34,13 @@ public class DCBorderedButton: DCBaseButton {
             updateColor()
         }
     }
-    
+	
+	@IBInspectable public var highlightedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+		didSet {
+			updateColor()
+		}
+	}
+	
     @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -87,7 +93,15 @@ public class DCBorderedButton: DCBaseButton {
     
     override public func updateColor() {
         super.updateColor()
-        layer.borderColor = enabled ? (selected ? selectedBorderColor.CGColor : normalBorderColor.CGColor) : disabledBorderColor.CGColor
+		if (enabled==false){
+			layer.borderColor = disabledBorderColor.CGColor
+		} else if (selected==true){
+			layer.borderColor = selectedBorderColor.CGColor
+		} else if (highlighted==true){
+			layer.borderColor = highlightedBorderColor.CGColor
+		} else {
+			layer.borderColor = normalBorderColor.CGColor
+		}
     }
-    
+	
 }

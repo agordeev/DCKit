@@ -35,15 +35,15 @@ public class DCMandatoryEmailTextField: DCMandatoryTextField {
             valid = !isMandatory
         }
         
-        selected = !valid
+        isSelected = !valid
         return valid
     }
     
     /// Validates given email address. The exression was taken from here: http://stackoverflow.com/questions/5428304/email-validation-on-textfield-in-iphone-sdk
-    public func isValidEmail(email: String) -> Bool {
+    public func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluateWithObject(email)
+        return emailTest.evaluate(with: email)
     }
     
 }

@@ -30,7 +30,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
                 attributes[NSForegroundColorAttributeName] = UIColor(white: 0.702, alpha: 1.0)
 //            }
             
-            if textAlignment != NSTextAlignment.Left {
+            if textAlignment != NSTextAlignment.left {
                 let paragraph = NSMutableParagraphStyle()
                 paragraph.alignment = textAlignment
                 attributes[NSParagraphStyleAttributeName] = paragraph
@@ -95,10 +95,10 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     
     // MARK: - Placeholder
     
-    func placeholderRectForBounds(bounds: CGRect) -> CGRect {
+    func placeholderRectForBounds(_ bounds: CGRect) -> CGRect {
         var rect = UIEdgeInsetsInsetRect(bounds, contentInset)
         
-        if respondsToSelector(Selector("textContainer")) {
+        if responds(to: #selector(getter: UITextView.textContainer)) {
             rect = UIEdgeInsetsInsetRect(rect, textContainerInset)
             let padding = textContainer.lineFragmentPadding;
             rect.origin.x = rect.origin.x + padding
@@ -119,22 +119,22 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     public override func customInit() {
         super.customInit()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: UITextViewTextDidChangeNotification, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: NSNotification.Name.UITextViewTextDidChange, object: self)
     }
     
     // MARK: - Misc
     
-    public override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
         // Draw placeholder if necessary
         if (text as NSString).length == 0 && attributedPlaceholder != nil {
             let placeholderRect = placeholderRectForBounds(bounds)
-            attributedPlaceholder!.drawInRect(placeholderRect)
+            attributedPlaceholder!.draw(in: placeholderRect)
         }
     }
     
-    public override func insertText(text: String) {
+    public override func insertText(_ text: String) {
         super.insertText(text)
         
         setNeedsDisplay()
@@ -145,7 +145,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextViewTextDidChangeNotification, object: self)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: self)
     }
 
 }

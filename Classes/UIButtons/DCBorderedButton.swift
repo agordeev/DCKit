@@ -11,19 +11,19 @@ import UIKit
 @IBDesignable
 public class DCBorderedButton: DCBaseButton {
     
-    override public var enabled: Bool {
+    override public var isEnabled: Bool {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
@@ -48,7 +48,7 @@ public class DCBorderedButton: DCBaseButton {
     @IBInspectable
     public var borderWidth: CGFloat = 1.0 {
         didSet {
-            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+            layer.borderWidth = borderWidth / UIScreen.main.scale
         }
     }
     
@@ -74,12 +74,12 @@ public class DCBorderedButton: DCBaseButton {
     }
     
     public func addBorder() {
-        layer.borderColor = normalBorderColor.CGColor
+        layer.borderColor = normalBorderColor.cgColor
         borderWidth = 1.0
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = false
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
     
@@ -87,7 +87,7 @@ public class DCBorderedButton: DCBaseButton {
     
     override public func updateColor() {
         super.updateColor()
-        layer.borderColor = enabled ? (selected ? selectedBorderColor.CGColor : normalBorderColor.CGColor) : disabledBorderColor.CGColor
+        layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
     }
     
 }

@@ -31,19 +31,19 @@ public class DCPickerTextField: DCBorderedTextField {
     override public func customInit() {
         super.customInit()
         
-        tintColor = UIColor.clearColor()
+        tintColor = UIColor.clear
     }
     
     // http://stackoverflow.com/questions/10640781/disable-magnifying-glass-in-uitextview
-    override public func addGestureRecognizer(gestureRecognizer: UIGestureRecognizer) {
+    override public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
         if gestureRecognizer is UILongPressGestureRecognizer {
-            gestureRecognizer.enabled = false
+            gestureRecognizer.isEnabled = false
         }
         super.addGestureRecognizer(gestureRecognizer)
     }
     
     // http://stackoverflow.com/questions/1426731/how-disable-copy-cut-select-select-all-in-uitextview
-    override public func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
+    override public func canPerformAction(_ action: Selector, withSender sender: AnyObject?) -> Bool {
         return false
     }
 

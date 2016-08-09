@@ -11,9 +11,9 @@ import UIKit
 @IBDesignable
 public class DCBorderedTextView: DCBaseTextView {
     
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
-            layer.borderColor = normalBorderColor.CGColor
+            layer.borderColor = normalBorderColor.cgColor
         }
     }
     
@@ -26,7 +26,7 @@ public class DCBorderedTextView: DCBaseTextView {
     
     @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
-            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+            layer.borderWidth = borderWidth / UIScreen.main.scale
         }
     }
     

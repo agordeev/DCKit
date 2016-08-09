@@ -11,9 +11,9 @@ import UIKit
 @IBDesignable
 public class DCBorderedView: DCBaseView {
     
-    @IBInspectable public var borderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var borderColor: UIColor = UIColor.lightGray {
         didSet {
-            layer.borderColor = borderColor.CGColor
+            layer.borderColor = borderColor.cgColor
         }
     }
     
@@ -30,7 +30,7 @@ public class DCBorderedView: DCBaseView {
     @IBInspectable
     public var borderWidth: CGFloat = 1.0 {
         didSet {
-            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+            layer.borderWidth = borderWidth / UIScreen.main.scale
         }
     }
     
@@ -43,12 +43,12 @@ public class DCBorderedView: DCBaseView {
     }
     
     public func addBorder() {
-        layer.borderColor = borderColor.CGColor
-        layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = borderWidth / UIScreen.main.scale
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = true
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
     

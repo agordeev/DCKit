@@ -13,7 +13,7 @@ import UIKit
 public class DCHairlineView: UIView {
     
     /// A color of the line. Don't use background color.
-    @IBInspectable public var color: UIColor = UIColor.blackColor()
+    @IBInspectable public var color: UIColor = UIColor.black
     
     /// A width/height of the line.
     @IBInspectable public var width: CGFloat = 1.0
@@ -23,19 +23,19 @@ public class DCHairlineView: UIView {
     
     // MARK: - Life cycle
     
-    public override func drawRect(rect: CGRect) {
+    public override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         if horizontal {
-            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect))
-            CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMaxY(rect))
+            context?.moveTo(x: rect.minX, y: rect.maxY)
+            context?.addLineTo(x: rect.maxX, y: rect.maxY)
         }
         else {
-            CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect))
-            CGContextAddLineToPoint(context, CGRectGetMinX(rect), CGRectGetMaxY(rect))
+            context?.moveTo(x: rect.minX, y: rect.minY)
+            context?.addLineTo(x: rect.minX, y: rect.maxY)
         }
-        CGContextSetStrokeColorWithColor(context, color.CGColor )
-        CGContextSetLineWidth(context, width / UIScreen.mainScreen().scale)
-        CGContextStrokePath(context)
+        context?.setStrokeColor(color.cgColor )
+        context?.setLineWidth(width / UIScreen.main.scale)
+        context?.strokePath()
     }
 
 }

@@ -73,9 +73,9 @@ public class DCBaseTextField: UITextField {
     /// Adds toolbar with Done button, which dismisses the keyboard.
     public func configureToolbar() {
         keyboardToolbar.sizeToFit()
-        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
             target: nil, action: nil)
-        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .Done,
+        let doneBarButton = UIBarButtonItem(barButtonSystemItem: .done,
             target: self, action: #selector(UIView.endEditing(_:)))
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         inputAccessoryView = keyboardToolbar

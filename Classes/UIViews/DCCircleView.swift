@@ -31,7 +31,7 @@ public class DCCircleView: DCBorderedView {
         layer.cornerRadius = frame.size.height*0.5
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = true
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
 

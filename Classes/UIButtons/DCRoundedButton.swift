@@ -50,14 +50,14 @@ public class DCRoundedButton: DCBorderedButton {
     }
     
     override public func addBorder() {
-        layer.borderColor = normalBorderColor.CGColor
-        layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+        layer.borderColor = normalBorderColor.cgColor
+        layer.borderWidth = 1.0 / UIScreen.main.scale
         setCornerRadius()
         clipsToBounds = true
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = true
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
     
@@ -69,7 +69,7 @@ public class DCRoundedButton: DCBorderedButton {
     
     override public func updateColor() {
         super.updateColor()
-        layer.borderColor = enabled ? (selected ? selectedBorderColor.CGColor : normalBorderColor.CGColor) : disabledBorderColor.CGColor
+        layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
     }
     
 }

@@ -11,37 +11,37 @@ import UIKit
 @IBDesignable
 public class DCBaseButton: UIButton {
     
-    @IBInspectable public var normalTextColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var normalTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(normalTextColor, forState: UIControlState.Normal)
+            setTitleColor(normalTextColor, for: UIControlState())
         }
     }
     
-    @IBInspectable public var disabledTextColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var disabledTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(disabledTextColor, forState: UIControlState.Disabled)
+            setTitleColor(disabledTextColor, for: UIControlState.disabled)
         }
     }
     
-    @IBInspectable public var selectedTextColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var selectedTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(selectedTextColor, forState: UIControlState.Selected)
+            setTitleColor(selectedTextColor, for: UIControlState.selected)
         }
     }
     
-    @IBInspectable public var highlightedTextColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var highlightedTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(highlightedTextColor, forState: UIControlState.Highlighted)
+            setTitleColor(highlightedTextColor, for: UIControlState.highlighted)
         }
     }
     
-    @IBInspectable public var normalBackgroundColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var normalBackgroundColor: UIColor = UIColor.white {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var disabledBackgroundColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var disabledBackgroundColor: UIColor = UIColor.white {
         didSet {
             updateColor()
         }
@@ -53,13 +53,13 @@ public class DCBaseButton: UIButton {
         }
     }
     
-    override public var enabled: Bool {
+    override public var isEnabled: Bool {
         didSet {
             updateColor()
         }
     }
     
-    override public var selected: Bool {
+    override public var isSelected: Bool {
         didSet {
             updateColor()
         }
@@ -96,7 +96,7 @@ public class DCBaseButton: UIButton {
     // MARK: - Misc
     
     public func updateColor() {
-        backgroundColor = enabled ? (selected ? selectedBackgroundColor : normalBackgroundColor) : disabledBackgroundColor
+        backgroundColor = isEnabled ? (isSelected ? selectedBackgroundColor : normalBackgroundColor) : disabledBackgroundColor
     }
     
 }

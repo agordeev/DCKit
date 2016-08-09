@@ -12,9 +12,9 @@ import UIKit
 public class DCBorderedTextField: DCBaseTextField {
     
     @IBInspectable
-    public var normalBorderColor: UIColor = UIColor.lightGrayColor() {
+    public var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
-            layer.borderColor = normalBorderColor.CGColor
+            layer.borderColor = normalBorderColor.cgColor
         }
     }
     
@@ -28,7 +28,7 @@ public class DCBorderedTextField: DCBaseTextField {
     @IBInspectable
     public var borderWidth: CGFloat = 1.0 {
         didSet {
-            layer.borderWidth = borderWidth / UIScreen.mainScreen().scale
+            layer.borderWidth = borderWidth / UIScreen.main.scale
         }
     }
     
@@ -50,29 +50,29 @@ public class DCBorderedTextField: DCBaseTextField {
     override public func customInit() {
         super.customInit()
         
-        borderStyle = UITextBorderStyle.None
+        borderStyle = UITextBorderStyle.none
         cornerRadius = 6.0
         borderWidth = 1.0
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = false
-        layer.rasterizationScale = UIScreen.mainScreen().scale
+        layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
     
-    override public func textRectForBounds(bounds: CGRect) -> CGRect {
+    override public func textRect(forBounds bounds: CGRect) -> CGRect {
         return textRect(bounds)
     }
     
-    override public func editingRectForBounds(bounds: CGRect) -> CGRect {
+    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
         return textRect(bounds)
     }
     
     // MARK: - Misc
     
     /// We use this internal func in textRectForBounds, editingRectForBounds etc. to adjust an actual rectangle according to applied corner radius
-    private func textRect(bounds: CGRect) -> CGRect {
-        return CGRectInset(bounds, cornerRadius, 0)
+    private func textRect(_ bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: cornerRadius, dy: 0)
     }
     
 }

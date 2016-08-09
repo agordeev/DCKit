@@ -12,14 +12,14 @@ import UIKit
 @IBDesignable
 public class DCMandatoryTextField: DCBorderedTextField {
     
-    override public var selected: Bool {
+    override public var isSelected: Bool {
         didSet {
             updateColor()
         }
     }
    
     @IBInspectable
-    public var highlightedBorderColor: UIColor = UIColor.redColor() {
+    public var highlightedBorderColor: UIColor = UIColor.red {
         didSet {
             updateColor()
         }
@@ -34,8 +34,8 @@ public class DCMandatoryTextField: DCBorderedTextField {
         super.customInit()
         
         updateColor()
-        isValid()
-        self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), forControlEvents: UIControlEvents.EditingChanged)
+        let _ = isValid()
+        self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
     }
     
     // MARK: - Initializers
@@ -65,7 +65,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     public func isValid() -> Bool {
         if isMandatory {
             let valid = !(text ?? "").isEmpty
-            selected = !valid
+            isSelected = !valid
             return valid
         }
         else {
@@ -76,7 +76,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     // MARK: - Misc
     
     func updateColor() {
-        layer.borderColor = selected ? highlightedBorderColor.CGColor : normalBorderColor.CGColor
+        layer.borderColor = isSelected ? highlightedBorderColor.cgColor : normalBorderColor.cgColor
     }
     
 }

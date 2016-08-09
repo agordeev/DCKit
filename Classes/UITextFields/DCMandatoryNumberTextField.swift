@@ -30,7 +30,7 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
     
     override public func customInit() {
         super.customInit()
-        keyboardType = UIKeyboardType.DecimalPad
+        keyboardType = UIKeyboardType.decimalPad
     }
     
     // MARK: - Validation
@@ -45,7 +45,7 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
             valid = !isMandatory
         }
         
-        selected = !valid
+        isSelected = !valid
         return valid
     }
     

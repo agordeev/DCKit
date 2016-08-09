@@ -11,15 +11,15 @@ import UIKit
 @IBDesignable
 public class DCDashedBorderedView: DCBaseView {
     
-    @IBInspectable public var borderColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var borderColor: UIColor = UIColor.lightGray {
         didSet {
-            borderLayer.strokeColor = borderColor.CGColor
+            borderLayer.strokeColor = borderColor.cgColor
         }
     }
     
     @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
-            borderLayer.lineWidth = borderWidth / UIScreen.mainScreen().scale
+            borderLayer.lineWidth = borderWidth / UIScreen.main.scale
         }
     }
     
@@ -46,7 +46,7 @@ public class DCDashedBorderedView: DCBaseView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        borderLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).CGPath
+        borderLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
         borderLayer.frame = bounds
     }
     
@@ -59,14 +59,14 @@ public class DCDashedBorderedView: DCBaseView {
     }
     
     public func addBorder() {
-        borderLayer.strokeColor = borderColor.CGColor
-        borderLayer.fillColor = UIColor.clearColor().CGColor
+        borderLayer.strokeColor = borderColor.cgColor
+        borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.lineDashPattern = [dashLength, dashSpace]
-        borderLayer.lineWidth = borderWidth / UIScreen.mainScreen().scale
+        borderLayer.lineWidth = borderWidth / UIScreen.main.scale
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         borderLayer.masksToBounds = true
-        borderLayer.rasterizationScale = UIScreen.mainScreen().scale
+        borderLayer.rasterizationScale = UIScreen.main.scale
         borderLayer.shouldRasterize = true
         
         layer.addSublayer(borderLayer)

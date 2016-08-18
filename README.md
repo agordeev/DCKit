@@ -1,4 +1,10 @@
 # DCKit
+
+[![Version](https://img.shields.io/cocoapods/v/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
+[![Build Status](https://travis-ci.org/andrew8712/DCKit.svg?branch=master)](https://travis-ci.org/andrew8712/DCKit)
+[![License](https://img.shields.io/cocoapods/l/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
+[![Platform](https://img.shields.io/cocoapods/p/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
+
 DCKit is a set of *@IBDesignable* iOS controls (`UIButtons`, `UITextFields` etc.), which have useful *@IBInspectable* properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.
 
 Written on Swift.

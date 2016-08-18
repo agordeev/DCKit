@@ -31,13 +31,13 @@ public class DCDashedBorderedView: DCBaseView {
     
     @IBInspectable public var dashLength: CGFloat = 4.0 {
         didSet {
-            borderLayer.lineDashPattern = [dashLength, dashSpace]
+            borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
     }
     
     @IBInspectable public var dashSpace: CGFloat = 2.0 {
         didSet {
-            borderLayer.lineDashPattern = [dashLength, dashSpace]
+            borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
     }
 
@@ -61,7 +61,7 @@ public class DCDashedBorderedView: DCBaseView {
     public func addBorder() {
         borderLayer.strokeColor = borderColor.cgColor
         borderLayer.fillColor = UIColor.clear.cgColor
-        borderLayer.lineDashPattern = [dashLength, dashSpace]
+        borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         borderLayer.lineWidth = borderWidth / UIScreen.main.scale
         
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance

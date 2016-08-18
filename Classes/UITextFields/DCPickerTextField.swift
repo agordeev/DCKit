@@ -43,7 +43,7 @@ public class DCPickerTextField: DCBorderedTextField {
     }
     
     // http://stackoverflow.com/questions/1426731/how-disable-copy-cut-select-select-all-in-uitextview
-    override public func canPerformAction(_ action: Selector, withSender sender: AnyObject?) -> Bool {
+    override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return false
     }
 

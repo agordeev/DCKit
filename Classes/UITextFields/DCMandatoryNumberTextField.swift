@@ -36,15 +36,16 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
     // MARK: - Validation
     
     override public func isValid() -> Bool {
-        let value = (text ?? "" as NSString).floatValue
-        
-        var valid = value < maxValue
-        
-        // If the field is Mandatory and empty - it's invalid
-        if text == "" {
+        var valid = true
+
+        if let value = Float(text ?? "") {
+            valid = value < maxValue
+        }
+        else {
+            // If the field is Mandatory and empty - it's invalid
             valid = !isMandatory
         }
-        
+
         isSelected = !valid
         return valid
     }

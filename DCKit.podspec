@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.ios.deployment_target = "8.0"
-  s.source   = { :git => "https://github.com/andrew8712/DCKit.git", :tag => "1.0.5"}
+  s.source   = { :git => "https://github.com/andrew8712/DCKit.git", :tag => s.version.to_s}
   s.source_files = "Classes/**/*.swift"
 end

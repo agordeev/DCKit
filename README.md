@@ -1,7 +1,7 @@
 # DCKit
 DCKit is a set of *@IBDesignable* iOS controls (`UIButtons`, `UITextFields` etc.), which have useful *@IBInspectable* properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.
 
-Written on Swift 2.1.
+Written on Swift.
 
 ##Preview
 
@@ -13,7 +13,8 @@ Written on Swift 2.1.
 
 [CocoaPods](http://www.cocoapods.org) recommended to use DCKit.
 
-1. Add `pod 'DCKit'` to your *Podfile*.
+1.1. For Swift 2.3 and below: Add `pod 'DCKit'` to your *Podfile*.
+1.2. For Swift 3: Add `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'` to your *Podfile*. 
 2. Add `use_frameworks!` keyword to your *Podfile*. The library is written on Swift, so this is a mandatory.
 2. Install the pod(s) by running `pod install`.
 
@@ -26,7 +27,7 @@ Written on Swift 2.1.
 
 1. Add a control (e.g. `UIButton`) onto storyboard:
 [![Add a control (e.g. UIButton) onto storyboard](Images/screenshot_002.png)](Images/screenshot_002.png)
-2. Change the button's class to `DCBorderedButton`. You'll notice a border appeared around the button:
+2. Change the button's class to `DCBorderedButton`. Also change module to `DCKit` if you've installed the library via CocoaPods. You'll notice a border appeared around the button:
 [![Change the button's class to DCBorderedButton](Images/screenshot_003.png)](Images/screenshot_003.png)
 3. Now you're able to customize the button from IB directly:
 [![Now you're able to customize the button from IB directly](Images/screenshot_004.png)](Images/screenshot_004.png)

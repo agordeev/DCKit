@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0dB-Sc-Mhj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0dB-Sc-Mhj">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,25 +20,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-08-6FW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Orv-fl-w6j" userLabel="UIButtons View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Orv-fl-w6j" userLabel="UIButtons View">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIButtons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpO-E3-vGb">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-nm-Qeo" customClass="DCRoundedButton" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="107" y="39" width="160" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="BPg-R4-Frj"/>
                                                     <constraint firstAttribute="height" constant="40" id="U0Y-3i-DSR"/>
                                                 </constraints>
                                                 <state key="normal" title="Rounded button">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -45,10 +42,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="107" y="98" width="160" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                                 <state key="normal" title="Bordered Button">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -57,7 +54,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="TpO-E3-vGb" firstAttribute="top" secondItem="Orv-fl-w6j" secondAttribute="top" id="1YX-fS-Unp"/>
                                             <constraint firstAttribute="trailing" secondItem="TpO-E3-vGb" secondAttribute="trailing" constant="8" id="Df2-x2-9Hz"/>
@@ -69,17 +66,14 @@
                                             <constraint firstItem="P3f-nm-Qeo" firstAttribute="centerX" secondItem="Orv-fl-w6j" secondAttribute="centerX" id="uEn-mj-wKC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-86-ip9" userLabel="UITextFields View">
-                                        <rect key="frame" x="0.0" y="154" width="375" height="219"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-86-ip9" userLabel="UITextFields View">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextFields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcT-hH-mBK">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bordered text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-fC-W00" customClass="DCBorderedTextField" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="31" width="295" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="ef2-6H-xoQ"/>
                                                 </constraints>
@@ -87,7 +81,6 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Nd-eBz" customClass="DCMandatoryTextField" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="78" width="295" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="IVS-d3-5wq"/>
                                                 </constraints>
@@ -98,7 +91,6 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory email text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-LX-B6C" customClass="DCMandatoryEmailTextField" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="125" width="295" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="NeD-ve-2Tl"/>
                                                 </constraints>
@@ -106,7 +98,6 @@
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory number text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-Yy-Wy9" customClass="DCMandatoryNumberTextField" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="172" width="295" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="hPt-kn-Nmt"/>
                                                 </constraints>
@@ -114,7 +105,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="eAf-Yy-Wy9" firstAttribute="leading" secondItem="DKQ-LX-B6C" secondAttribute="leading" id="034-aU-Iqa"/>
                                             <constraint firstItem="eAf-Yy-Wy9" firstAttribute="trailing" secondItem="DKQ-LX-B6C" secondAttribute="trailing" id="2tS-D4-kZx"/>
@@ -134,18 +125,15 @@
                                             <constraint firstItem="DKQ-LX-B6C" firstAttribute="leading" secondItem="wih-Nd-eBz" secondAttribute="leading" id="u6e-kj-s5N"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Our-tz-wm6" userLabel="UITextViews View">
-                                        <rect key="frame" x="0.0" y="373" width="375" height="183"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Our-tz-wm6" userLabel="UITextViews View">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UITextViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-fZ-pA2">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-m0-fh6" customClass="DCPlaceholderTextView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="31" width="295" height="60"/>
-                                                <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="6v5-SD-VJ9"/>
                                                 </constraints>
@@ -154,13 +142,12 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="A placeholder text view"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
-                                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bordered text view" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-vn-0dn" customClass="DCBorderedTextView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="107" width="295" height="60"/>
-                                                <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="QWy-fi-X7d"/>
                                                 </constraints>
@@ -168,7 +155,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="normalBorderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="6"/>
@@ -179,7 +166,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="gAw-vn-0dn" firstAttribute="leading" secondItem="Our-tz-wm6" secondAttribute="leading" constant="40" id="Ecd-db-jWV"/>
                                             <constraint firstItem="gAw-vn-0dn" firstAttribute="top" secondItem="9Gk-m0-fh6" secondAttribute="bottom" constant="16" id="IDA-at-xeH"/>
@@ -193,26 +180,22 @@
                                             <constraint firstAttribute="trailing" secondItem="9Gk-m0-fh6" secondAttribute="trailing" constant="40" id="ziB-RP-I5U"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Qu-0bx" userLabel="UIViews View">
-                                        <rect key="frame" x="0.0" y="556" width="375" height="299.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-Qu-0bx" userLabel="UIViews View">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIViews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Hd-Dg0">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4B-fZ-WLa" customClass="DCBorderedView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="31" width="295" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bordered view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-5T-ATg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="bQH-5T-ATg" firstAttribute="leading" secondItem="o4B-fZ-WLa" secondAttribute="leading" id="P4D-d5-Vng"/>
                                                     <constraint firstAttribute="trailing" secondItem="bQH-5T-ATg" secondAttribute="trailing" id="arM-i9-DG9"/>
@@ -222,7 +205,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="3"/>
@@ -230,16 +213,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-rt-Uw9" customClass="DCDashedBorderedView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="40" y="107" width="295" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashed view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88q-9P-4Aa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="88q-9P-4Aa" secondAttribute="trailing" id="7Xg-uM-1dA"/>
                                                     <constraint firstAttribute="height" constant="60" id="BQy-xL-fuA"/>
@@ -249,7 +230,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="3"/>
@@ -263,18 +244,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-I0-8NR" customClass="DCCircleView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="157.5" y="183" width="60" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-cp-Nnq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                         <string key="text">Circle 
 view</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Cmf-cp-Nnq" secondAttribute="bottom" id="AdV-um-FpV"/>
                                                     <constraint firstAttribute="trailing" secondItem="Cmf-cp-Nnq" secondAttribute="trailing" id="KTv-Bh-3x1"/>
@@ -285,20 +264,18 @@ view</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hairline view:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-dg-hMI">
-                                                <rect key="frame" x="40" y="259" width="295" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-NM-a1v" customClass="DCHairlineView" customModule="DCKitSample" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="282.5" width="375" height="1"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="9bH-CR-GHP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="fCh-rt-Uw9" secondAttribute="trailing" constant="40" id="4Qa-pC-Wcf"/>
                                             <constraint firstItem="Vlf-NM-a1v" firstAttribute="leading" secondItem="mlw-Qu-0bx" secondAttribute="leading" id="5VR-Uo-wmT"/>
@@ -339,7 +316,7 @@ view</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HmE-08-6FW" secondAttribute="trailing" id="6Ji-oA-sLh"/>
                             <constraint firstItem="CRt-Hj-MRi" firstAttribute="top" secondItem="HmE-08-6FW" secondAttribute="bottom" id="Mmu-MS-mMO"/>

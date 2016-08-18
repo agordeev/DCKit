@@ -8,33 +8,37 @@
 
 import UIKit
 
-@IBDesignable
-public class DCBorderedButton: DCBaseButton {
-    
+/// A button with border.
+@IBDesignable public class DCBorderedButton: DCBaseButton {
+
     override public var isEnabled: Bool {
         didSet {
             updateColor()
         }
     }
-    
+
+    /// Border color for Normal state.
     @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
-    
+
+    /// Border color for Disabled state.
     @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
-    
+
+    /// Border color for Selected state.
     @IBInspectable public var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
         didSet {
             updateColor()
         }
     }
-    
+
+    /// Button's corner radius.
     @IBInspectable public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -44,50 +48,52 @@ public class DCBorderedButton: DCBaseButton {
             layer.masksToBounds = newValue > 0
         }
     }
-    
-    @IBInspectable
-    public var borderWidth: CGFloat = 1.0 {
+
+    /// Button's border width. Gets automatically scaled with using UIScreen.main.scale.
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
     }
-    
+
     // MARK: - Initializers
-    
+
     // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
     // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     // MARK: - Build control
-    
+
     override public func customInit() {
         super.customInit()
-        
+
         addBorder()
     }
-    
+
+    /// Adds a border to the button.
     public func addBorder() {
         layer.borderColor = normalBorderColor.cgColor
         borderWidth = 1.0
-        
+
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance
         layer.masksToBounds = false
         layer.rasterizationScale = UIScreen.main.scale
         layer.shouldRasterize = true
     }
-    
+
     // MARK: - Misc
-    
+
     override public func updateColor() {
         super.updateColor()
+
         layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
     }
-    
+
 }

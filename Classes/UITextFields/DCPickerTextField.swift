@@ -12,28 +12,28 @@ import UIKit
 /// It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
 @IBDesignable
 public class DCPickerTextField: DCBorderedTextField {
-    
+
     // MARK: - Initializers
-    
+
     // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
     // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     // MARK: - Building control
-    
+
     override public func customInit() {
         super.customInit()
-        
+
         tintColor = UIColor.clear
     }
-    
+
     // http://stackoverflow.com/questions/10640781/disable-magnifying-glass-in-uitextview
     override public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
         if gestureRecognizer is UILongPressGestureRecognizer {
@@ -41,7 +41,7 @@ public class DCPickerTextField: DCBorderedTextField {
         }
         super.addGestureRecognizer(gestureRecognizer)
     }
-    
+
     // http://stackoverflow.com/questions/1426731/how-disable-copy-cut-select-select-all-in-uitextview
     override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return false

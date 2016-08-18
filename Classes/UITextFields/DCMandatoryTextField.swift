@@ -11,72 +11,73 @@ import UIKit
 /// Highlights the text field if the entered value is false.
 @IBDesignable
 public class DCMandatoryTextField: DCBorderedTextField {
-    
+
     override public var isSelected: Bool {
         didSet {
             updateColor()
         }
     }
-   
+
     @IBInspectable
     public var highlightedBorderColor: UIColor = UIColor.red {
         didSet {
             updateColor()
         }
     }
-    
+
     @IBInspectable
     public var isMandatory: Bool = true
-    
+
     // MARK: - Build control
-    
+
     override public func customInit() {
         super.customInit()
-        
+
         updateColor()
         let _ = isValid()
         self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
     }
-    
+
     // MARK: - Initializers
-    
+
     // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
     // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
-    
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     // MARK: - Build control
-    
+
     override public func configurePlaceholder() {
-        
+
     }
-    
+
     // MARK: - Validation
-    
-    /// Checks if the field's value is valid. Can be overriden by subclasses.
-    ///
-    /// :return: True, if the field is mandatory and value is not empty.
+
+    /**
+     Checks if the field's value is valid. Can be overriden by subclasses.
+
+     - returns: True, if the field is mandatory and value is not empty.
+     */
     public func isValid() -> Bool {
         if isMandatory {
             let valid = !(text ?? "").isEmpty
             isSelected = !valid
             return valid
-        }
-        else {
+        } else {
             return true
         }
     }
-    
+
     // MARK: - Misc
-    
+
     func updateColor() {
         layer.borderColor = isSelected ? highlightedBorderColor.cgColor : normalBorderColor.cgColor
     }
-    
+
 }

@@ -10,20 +10,20 @@ import UIKit
 
 @IBDesignable
 public class DCCircleView: DCBorderedView {
-    
+
     // MARK: - Life cycle
-    
+
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         updateLayerSettings()
     }
-    
+
     // MARK: - Build control
-    
+
     override public func customInit() {
         super.customInit()
-        
+
         updateLayerSettings()
     }
 

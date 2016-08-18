@@ -1,3 +1,13 @@
 language: objective-c
+
+branches:
+ only:
+ - master
+
+xcode_project: DCKitSample.xcodeproj
+xcode_scheme: DCKitSample
+osx_image: xcode8
+xcode_sdk: iphonesimulator10.0
+
 script:
-- xctool test -project DCKitSample.xcodeproj -scheme DCKitSample -sdk iphonesimulator
+- xcodebuild clean build test -project DCKitSample.xcodeproj -scheme DCKitSample

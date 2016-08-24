@@ -65,11 +65,4 @@ public class DCRoundedButton: DCBorderedButton {
         layer.cornerRadius = frame.size.height*0.5
     }
     
-    // MARK: - Misc
-    
-    override public func updateColor() {
-        super.updateColor()
-        layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
-    }
-    
 }

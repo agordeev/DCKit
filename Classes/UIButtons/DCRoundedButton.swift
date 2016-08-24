@@ -9,10 +9,10 @@
 import UIKit
 
 /// A bordered button with rounded corners.
-@IBDesignable public class DCRoundedButton: DCBorderedButton {
+@IBDesignable open class DCRoundedButton: DCBorderedButton {
 
     /// cornerRadius doesn't work for this control. It's strictly set to frame.size.height*0.5
-    override public var cornerRadius: CGFloat {
+    override open var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -35,7 +35,7 @@ import UIKit
 
     // MARK: - Life cycle
 
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
 
         setCornerRadius()
@@ -43,13 +43,13 @@ import UIKit
 
     // MARK: - Build control
 
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
 
         addBorder()
     }
 
-    override public func addBorder() {
+    override open func addBorder() {
         layer.borderColor = normalBorderColor.cgColor
         layer.borderWidth = 1.0 / UIScreen.main.scale
         setCornerRadius()
@@ -67,7 +67,7 @@ import UIKit
 
     // MARK: - Misc
 
-    override public func updateColor() {
+    override open func updateColor() {
         super.updateColor()
         layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
     }

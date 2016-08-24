@@ -11,7 +11,7 @@ import UIKit
 /// This text field can be used for UIDatePicker and UIPickerView.
 /// It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
 @IBDesignable
-public class DCPickerTextField: DCBorderedTextField {
+open class DCPickerTextField: DCBorderedTextField {
 
     // MARK: - Initializers
 
@@ -28,14 +28,14 @@ public class DCPickerTextField: DCBorderedTextField {
 
     // MARK: - Building control
 
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
 
         tintColor = UIColor.clear
     }
 
     // http://stackoverflow.com/questions/10640781/disable-magnifying-glass-in-uitextview
-    override public func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
+    override open func addGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
         if gestureRecognizer is UILongPressGestureRecognizer {
             gestureRecognizer.isEnabled = false
         }
@@ -43,7 +43,7 @@ public class DCPickerTextField: DCBorderedTextField {
     }
 
     // http://stackoverflow.com/questions/1426731/how-disable-copy-cut-select-select-all-in-uitextview
-    override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+    override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return false
     }
 

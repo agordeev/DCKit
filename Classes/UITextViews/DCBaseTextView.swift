@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class DCBaseTextView: UITextView {
+open class DCBaseTextView: UITextView {
 
     /// For some reasons setting tintColor from IB doesn't work, so we have to add a property for that
     @IBInspectable
-    public var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
+    open var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
         didSet {
             tintColor = cursorColor
         }
@@ -20,7 +20,7 @@ public class DCBaseTextView: UITextView {
 
     /// Shows whether we should show the toolbar with Done button of not.
     @IBInspectable
-    public var showToolbar: Bool = true {
+    open var showToolbar: Bool = true {
         didSet {
             inputAccessoryView = showToolbar ? keyboardToolbar : nil
         }
@@ -46,20 +46,20 @@ public class DCBaseTextView: UITextView {
     // MARK: - Build control
 
     /// Overriden method must call super.customInit().
-    public func customInit() {
+    open func customInit() {
         configureFont()
         configureColor()
         addToolbar()
     }
 
-    public func configureFont() {
+    open func configureFont() {
     }
 
-    public func configureColor() {
+    open func configureColor() {
     }
 
     /// Adds toolbar with Done button, which dismisses the keyboard.
-    public func addToolbar() {
+    open func addToolbar() {
         keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,

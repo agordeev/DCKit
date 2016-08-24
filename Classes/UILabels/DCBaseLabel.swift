@@ -9,7 +9,7 @@
 import UIKit
 
 /// Base label class.
-public class DCBaseLabel: UILabel {
+open class DCBaseLabel: UILabel {
 
     // MARK: - Initializers
 
@@ -31,17 +31,17 @@ public class DCBaseLabel: UILabel {
     // MARK: - Build control
 
     /// Overriden method must call super.customInit().
-    public func customInit() {
+    open func customInit() {
         configureFont()
         configureColor()
     }
 
     /// Configures control's font.
-    public func configureFont() {
+    open func configureFont() {
     }
 
     /// Configures control's label.
-    public func configureColor() {
+    open func configureColor() {
     }
 
 }

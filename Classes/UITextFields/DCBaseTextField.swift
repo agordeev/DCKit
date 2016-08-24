@@ -9,10 +9,10 @@
 import UIKit
 
 /// Base text field class.
-@IBDesignable public class DCBaseTextField: UITextField {
+@IBDesignable open class DCBaseTextField: UITextField {
 
     /// Placeholder text color.
-    @IBInspectable public var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
+    @IBInspectable open var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
         didSet {
             if let placeholder = placeholder {
                 attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font!])
@@ -22,7 +22,7 @@ import UIKit
 
     /// A blinking cursor color.
     /// For some reasons setting tintColor from IB doesn't work, so we have to add a property for that.
-    @IBInspectable public var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
+    @IBInspectable open var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
         didSet {
             tintColor = cursorColor
         }
@@ -30,7 +30,7 @@ import UIKit
 
     /// Set this property to `true` if you want to show a toolbar with Done button above the keyboard when the text field is in focus.
     /// Default is `true`.
-    @IBInspectable public var showDoneButton: Bool = true {
+    @IBInspectable open var showDoneButton: Bool = true {
         didSet {
             inputAccessoryView = showDoneButton ? keyboardToolbar : nil
         }
@@ -55,7 +55,7 @@ import UIKit
     // MARK: - Building TextField
 
     /// Overriden method must call `super.customInit()`.
-    public func customInit() {
+    open func customInit() {
         configureFont()
         configureColor()
         configurePlaceholder()
@@ -63,19 +63,19 @@ import UIKit
     }
 
     /// Configures control's font.
-    public func configureFont() {
+    open func configureFont() {
     }
 
     /// Configures control's color.
-    public func configureColor() {
+    open func configureColor() {
     }
 
     /// Configures control's placeholder.
-    public func configurePlaceholder() {
+    open func configurePlaceholder() {
     }
 
     /// Adds toolbar with Done button, which dismisses the keyboard.
-    public func configureToolbar() {
+    open func configureToolbar() {
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
             target: nil, action: nil)

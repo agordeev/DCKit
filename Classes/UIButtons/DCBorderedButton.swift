@@ -9,37 +9,37 @@
 import UIKit
 
 /// A button with border.
-@IBDesignable public class DCBorderedButton: DCBaseButton {
+@IBDesignable open class DCBorderedButton: DCBaseButton {
 
-    override public var isEnabled: Bool {
+    override open var isEnabled: Bool {
         didSet {
             updateColor()
         }
     }
 
     /// Border color for Normal state.
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
 
     /// Border color for Disabled state.
-    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var disabledBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
 
     /// Border color for Selected state.
-    @IBInspectable public var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+    @IBInspectable open var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
         didSet {
             updateColor()
         }
     }
 
     /// Button's corner radius.
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable open var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -50,7 +50,7 @@ import UIKit
     }
 
     /// Button's border width. Gets automatically scaled with using UIScreen.main.scale.
-    @IBInspectable public var borderWidth: CGFloat = 1.0 {
+    @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
@@ -71,14 +71,14 @@ import UIKit
 
     // MARK: - Build control
 
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
 
         addBorder()
     }
 
     /// Adds a border to the button.
-    public func addBorder() {
+    open func addBorder() {
         layer.borderColor = normalBorderColor.cgColor
         borderWidth = 1.0
 
@@ -90,7 +90,7 @@ import UIKit
 
     // MARK: - Misc
 
-    override public func updateColor() {
+    override open func updateColor() {
         super.updateColor()
 
         layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor

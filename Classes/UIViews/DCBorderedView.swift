@@ -9,15 +9,15 @@
 import UIKit
 
 @IBDesignable
-public class DCBorderedView: DCBaseView {
+open class DCBorderedView: DCBaseView {
     
-    @IBInspectable public var borderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var borderColor: UIColor = UIColor.lightGray {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable open var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -28,7 +28,7 @@ public class DCBorderedView: DCBaseView {
     }
     
     @IBInspectable
-    public var borderWidth: CGFloat = 1.0 {
+    open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
@@ -36,13 +36,13 @@ public class DCBorderedView: DCBaseView {
     
     // MARK: - Build control
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         
         addBorder()
     }
     
-    public func addBorder() {
+    open func addBorder() {
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth / UIScreen.main.scale
         

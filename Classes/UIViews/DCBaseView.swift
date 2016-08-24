@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DCBaseView: UIView {
+open class DCBaseView: UIView {
     
     // MARK: - Initializers
     
@@ -27,7 +27,7 @@ public class DCBaseView: UIView {
     // MARK: - Build control
     
     /// Overriden method must call super.customInit().
-    public func customInit() {
+    open func customInit() {
     }
 
 }

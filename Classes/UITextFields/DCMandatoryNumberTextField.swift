@@ -9,9 +9,9 @@
 import UIKit
 
 /// Allows to set a max possible value.
-public class DCMandatoryNumberTextField: DCMandatoryTextField {
+open class DCMandatoryNumberTextField: DCMandatoryTextField {
     
-    @IBInspectable public var maxValue: Float = 999
+    @IBInspectable open var maxValue: Float = 999
     
     // MARK: - Initializers
     
@@ -28,14 +28,14 @@ public class DCMandatoryNumberTextField: DCMandatoryTextField {
     
     // MARK: - Build control
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         keyboardType = UIKeyboardType.decimalPad
     }
     
     // MARK: - Validation
     
-    override public func isValid() -> Bool {
+    override open func isValid() -> Bool {
         var valid = true
 
         if let value = Float(text ?? "") {

@@ -9,22 +9,22 @@
 import UIKit
 
 @IBDesignable
-public class DCBorderedTextView: DCBaseTextView {
+open class DCBorderedTextView: DCBaseTextView {
     
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             layer.borderColor = normalBorderColor.cgColor
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat = 6.0 {
+    @IBInspectable open var cornerRadius: CGFloat = 6.0 {
         didSet {
             layer.cornerRadius = cornerRadius
             layer.masksToBounds = cornerRadius > 0
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 1.0 {
+    @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }

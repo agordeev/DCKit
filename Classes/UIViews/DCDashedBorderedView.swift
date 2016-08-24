@@ -9,33 +9,33 @@
 import UIKit
 
 @IBDesignable
-public class DCDashedBorderedView: DCBaseView {
+open class DCDashedBorderedView: DCBaseView {
     
-    @IBInspectable public var borderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var borderColor: UIColor = UIColor.lightGray {
         didSet {
             borderLayer.strokeColor = borderColor.cgColor
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 1.0 {
+    @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             borderLayer.lineWidth = borderWidth / UIScreen.main.scale
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable open var cornerRadius: CGFloat = 0.0 {
         didSet {
             layoutSubviews()
         }
     }
     
-    @IBInspectable public var dashLength: CGFloat = 4.0 {
+    @IBInspectable open var dashLength: CGFloat = 4.0 {
         didSet {
             borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
     }
     
-    @IBInspectable public var dashSpace: CGFloat = 2.0 {
+    @IBInspectable open var dashSpace: CGFloat = 2.0 {
         didSet {
             borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
@@ -43,7 +43,7 @@ public class DCDashedBorderedView: DCBaseView {
 
     let borderLayer = CAShapeLayer()
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         borderLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
@@ -52,13 +52,13 @@ public class DCDashedBorderedView: DCBaseView {
     
     // MARK: - Build control
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         
         addBorder()
     }
     
-    public func addBorder() {
+    open func addBorder() {
         borderLayer.strokeColor = borderColor.cgColor
         borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]

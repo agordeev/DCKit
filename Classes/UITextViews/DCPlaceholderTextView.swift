@@ -10,10 +10,10 @@ import UIKit
 
 /// UITextView subclass that adds placeholder support like UITextField has. Swift version of https://github.com/soffes/SAMTextView/tree/master/SAMTextView
 @IBDesignable
-public class DCPlaceholderTextView: DCBorderedTextView {
+open class DCPlaceholderTextView: DCBorderedTextView {
     
     ///  The string that is displayed when there is no other text in the text view. This property reads and writes the attributed variant.
-    @IBInspectable public var placeholder: String? {
+    @IBInspectable open var placeholder: String? {
         set {
             if newValue == self.attributedPlaceholder?.string {
                 return
@@ -44,37 +44,37 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     }
     
     /// The attributed string that is displayed when there is no other text in the text view.
-    @IBInspectable public var attributedPlaceholder: NSAttributedString? {
+    @IBInspectable open var attributedPlaceholder: NSAttributedString? {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override public var text: String! {
+    override open var text: String! {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override public var attributedText: NSAttributedString! {
+    override open var attributedText: NSAttributedString! {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override public var contentInset: UIEdgeInsets {
+    override open var contentInset: UIEdgeInsets {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override public var font: UIFont? {
+    override open var font: UIFont? {
         didSet {
             setNeedsDisplay()
         }
     }
     
-    override public var textAlignment: NSTextAlignment {
+    override open var textAlignment: NSTextAlignment {
         didSet {
             setNeedsDisplay()
         }
@@ -116,7 +116,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     
     // MARK: - Build control
     
-    public override func customInit() {
+    open override func customInit() {
         super.customInit()
         
         NotificationCenter.default.addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: NSNotification.Name.UITextViewTextDidChange, object: self)
@@ -124,7 +124,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
     
     // MARK: - Misc
     
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         // Draw placeholder if necessary
@@ -134,7 +134,7 @@ public class DCPlaceholderTextView: DCBorderedTextView {
         }
     }
     
-    public override func insertText(_ text: String) {
+    open override func insertText(_ text: String) {
         super.insertText(text)
         
         setNeedsDisplay()

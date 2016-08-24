@@ -9,10 +9,10 @@
 import UIKit
 
 @IBDesignable
-public class DCBaseTextField: UITextField {
+open class DCBaseTextField: UITextField {
     
     @IBInspectable
-    public var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
+    open var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
         didSet {
             if let placeholder = placeholder {
                 attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: placeholderColor, NSFontAttributeName: font!])
@@ -22,14 +22,14 @@ public class DCBaseTextField: UITextField {
     
     /// For some reasons setting tintColor from IB doesn't work, so we have to add a property for that
     @IBInspectable
-    public var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
+    open var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
         didSet {
             tintColor = cursorColor
         }
     }
     
     @IBInspectable
-    public var showDoneButton: Bool = true {
+    open var showDoneButton: Bool = true {
         didSet {
             inputAccessoryView = showDoneButton ? keyboardToolbar : nil
         }
@@ -54,24 +54,24 @@ public class DCBaseTextField: UITextField {
     // MARK: - Building TextField
     
     /// Overriden method must call super.customInit().
-    public func customInit() {
+    open func customInit() {
         configureFont()
         configureColor()
         configurePlaceholder()
         configureToolbar()
     }
     
-    public func configureFont() {
+    open func configureFont() {
     }
     
-    public func configureColor() {
+    open func configureColor() {
     }
     
-    public func configurePlaceholder() {
+    open func configurePlaceholder() {
     }
     
     /// Adds toolbar with Done button, which dismisses the keyboard.
-    public func configureToolbar() {
+    open func configureToolbar() {
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
             target: nil, action: nil)

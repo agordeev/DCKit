@@ -10,27 +10,27 @@ import UIKit
 
 /// Highlights the text field if the entered value is false.
 @IBDesignable
-public class DCMandatoryTextField: DCBorderedTextField {
+open class DCMandatoryTextField: DCBorderedTextField {
     
-    override public var isSelected: Bool {
+    override open var isSelected: Bool {
         didSet {
             updateColor()
         }
     }
    
     @IBInspectable
-    public var highlightedBorderColor: UIColor = UIColor.red {
+    open var highlightedBorderColor: UIColor = UIColor.red {
         didSet {
             updateColor()
         }
     }
     
     @IBInspectable
-    public var isMandatory: Bool = true
+    open var isMandatory: Bool = true
     
     // MARK: - Build control
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         
         updateColor()
@@ -53,7 +53,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     
     // MARK: - Build control
     
-    override public func configurePlaceholder() {
+    override open func configurePlaceholder() {
         
     }
     
@@ -62,7 +62,7 @@ public class DCMandatoryTextField: DCBorderedTextField {
     /// Checks if the field's value is valid. Can be overriden by subclasses.
     ///
     /// :return: True, if the field is mandatory and value is not empty.
-    public func isValid() -> Bool {
+    open func isValid() -> Bool {
         if isMandatory {
             let valid = !(text ?? "").isEmpty
             isSelected = !valid

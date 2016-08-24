@@ -9,33 +9,33 @@
 import UIKit
 
 @IBDesignable
-public class DCBorderedButton: DCBaseButton {
+open class DCBorderedButton: DCBaseButton {
     
-    override public var isEnabled: Bool {
+    override open var isEnabled: Bool {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var normalBorderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var disabledBorderColor: UIColor = UIColor.lightGray {
+    @IBInspectable open var disabledBorderColor: UIColor = UIColor.lightGray {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+    @IBInspectable open var selectedBorderColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
         didSet {
             updateColor()
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable open var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -46,7 +46,7 @@ public class DCBorderedButton: DCBaseButton {
     }
     
     @IBInspectable
-    public var borderWidth: CGFloat = 1.0 {
+    open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
@@ -67,13 +67,13 @@ public class DCBorderedButton: DCBaseButton {
     
     // MARK: - Build control
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         
         addBorder()
     }
     
-    public func addBorder() {
+    open func addBorder() {
         layer.borderColor = normalBorderColor.cgColor
         borderWidth = 1.0
         
@@ -85,7 +85,7 @@ public class DCBorderedButton: DCBaseButton {
     
     // MARK: - Misc
     
-    override public func updateColor() {
+    override open func updateColor() {
         super.updateColor()
         layer.borderColor = isEnabled ? (isSelected ? selectedBorderColor.cgColor : normalBorderColor.cgColor) : disabledBorderColor.cgColor
     }

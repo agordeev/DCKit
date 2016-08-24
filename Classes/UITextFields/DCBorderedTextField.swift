@@ -9,24 +9,24 @@
 import UIKit
 
 @IBDesignable
-public class DCBorderedTextField: DCBaseTextField {
+open class DCBorderedTextField: DCBaseTextField {
     
     @IBInspectable
-    public var normalBorderColor: UIColor = UIColor.lightGray {
+    open var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             layer.borderColor = normalBorderColor.cgColor
         }
     }
     
     @IBInspectable
-    public var cornerRadius: CGFloat = 6.0 {
+    open var cornerRadius: CGFloat = 6.0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
     
     @IBInspectable
-    public var borderWidth: CGFloat = 1.0 {
+    open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
@@ -47,7 +47,7 @@ public class DCBorderedTextField: DCBaseTextField {
     
     // MARK: - Build text field
     
-    override public func customInit() {
+    override open func customInit() {
         super.customInit()
         
         borderStyle = UITextBorderStyle.none
@@ -60,11 +60,11 @@ public class DCBorderedTextField: DCBaseTextField {
         layer.shouldRasterize = true
     }
     
-    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
         return textRect(bounds)
     }
     
-    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return textRect(bounds)
     }
     

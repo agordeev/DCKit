@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DCBaseLabel: UILabel {
+open class DCBaseLabel: UILabel {
     
     // MARK: - Initializers
     
@@ -30,15 +30,15 @@ public class DCBaseLabel: UILabel {
     // MARK: - Build control
     
     /// Overriden method must call super.customInit().
-    public func customInit() {
+    open func customInit() {
         configureFont()
         configureColor()
     }
     
-    public func configureFont() {
+    open func configureFont() {
     }
     
-    public func configureColor() {
+    open func configureColor() {
     }
 
 }

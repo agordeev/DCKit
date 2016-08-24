@@ -43,7 +43,7 @@ open class DCDashedBorderedView: DCBaseView {
 
     let borderLayer = CAShapeLayer()
     
-    open override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         borderLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath

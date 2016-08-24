@@ -38,19 +38,6 @@ open class DCMandatoryTextField: DCBorderedTextField {
         self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
     }
     
-    // MARK: - Initializers
-    
-    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
-    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
-    
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     // MARK: - Build control
     
     override open func configurePlaceholder() {

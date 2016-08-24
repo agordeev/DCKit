@@ -11,19 +11,6 @@ import UIKit
 /// This field is also checks if the entered value is a valid email address.
 @IBDesignable open class DCMandatoryEmailTextField: DCMandatoryTextField {
 
-    // MARK: - Initializers
-
-    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
-    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
-
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
     // MARK: - Validation
 
     override open func isValid() -> Bool {

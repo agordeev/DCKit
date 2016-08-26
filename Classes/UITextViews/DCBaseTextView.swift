@@ -8,25 +8,24 @@
 
 import UIKit
 
-open class DCBaseTextView: UITextView {
+/// Base text view class.
+@IBDesignable open class DCBaseTextView: UITextView {
 
     /// For some reasons setting tintColor from IB doesn't work, so we have to add a property for that
-    @IBInspectable
-    open var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
+    @IBInspectable open var cursorColor: UIColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) {
         didSet {
             tintColor = cursorColor
         }
     }
 
     /// Shows whether we should show the toolbar with Done button of not.
-    @IBInspectable
-    open var showToolbar: Bool = true {
+    @IBInspectable open var showToolbar: Bool = true {
         didSet {
             inputAccessoryView = showToolbar ? keyboardToolbar : nil
         }
     }
 
-    /// The toolbar with Done button.
+    /// A toolbar with Done button.
     private var keyboardToolbar = UIToolbar()
 
     // MARK: - Initializers

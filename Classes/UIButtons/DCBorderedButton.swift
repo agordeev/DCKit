@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// A button with border.
+/// Button class with the ability to set a border with a corner.
 @IBDesignable open class DCBorderedButton: DCBaseButton {
 
     override open var isEnabled: Bool {
@@ -38,7 +38,7 @@ import UIKit
         }
     }
 
-    /// Button's corner radius.
+    /// The control's corner radius.
     @IBInspectable open var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -49,7 +49,7 @@ import UIKit
         }
     }
 
-    /// Button's border width. Gets automatically scaled with using UIScreen.main.scale.
+    /// The control's border width. Gets automatically scaled with using UIScreen.main.scale.
     @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale

@@ -8,25 +8,25 @@
 
 import UIKit
 
-@IBDesignable
-open class DCBorderedTextField: DCBaseTextField {
+/// Text field with the ability to set a border with a corner.
+@IBDesignable open class DCBorderedTextField: DCBaseTextField {
 
-    @IBInspectable
-    open var normalBorderColor: UIColor = UIColor.lightGray {
+    /// Border color for Normal state.
+    @IBInspectable open var normalBorderColor: UIColor = UIColor.lightGray {
         didSet {
             layer.borderColor = normalBorderColor.cgColor
         }
     }
 
-    @IBInspectable
-    open var cornerRadius: CGFloat = 6.0 {
+    /// The control's corner radius.
+    @IBInspectable open var cornerRadius: CGFloat = 6.0 {
         didSet {
             layer.cornerRadius = cornerRadius
         }
     }
 
-    @IBInspectable
-    open var borderWidth: CGFloat = 1.0 {
+    /// The control's border width. Gets automatically scaled with using UIScreen.main.scale.
+    @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             layer.borderWidth = borderWidth / UIScreen.main.scale
         }
@@ -79,5 +79,6 @@ open class DCBorderedTextField: DCBaseTextField {
         editingRect.size = CGSize(width: editingRect.width - rightPadding, height: editingRect.height)
         return editingRect
     }
+
 
 }

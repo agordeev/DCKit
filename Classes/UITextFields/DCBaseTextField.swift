@@ -36,6 +36,7 @@ import UIKit
         }
     }
 
+    /// A toolbar with Done button.
     private let keyboardToolbar = UIToolbar()
 
     // MARK: - Initializers

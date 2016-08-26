@@ -8,40 +8,46 @@
 
 import UIKit
 
-@IBDesignable
-open class DCDashedBorderedView: DCBaseView {
+/// UIView with dashed border.
+@IBDesignable open class DCDashedBorderedView: DCBaseView {
 
+    /// The control's border color.
     @IBInspectable open var borderColor: UIColor = UIColor.lightGray {
         didSet {
             borderLayer.strokeColor = borderColor.cgColor
         }
     }
 
+    /// The control's border width. Gets automatically scaled with using UIScreen.main.scale.
     @IBInspectable open var borderWidth: CGFloat = 1.0 {
         didSet {
             borderLayer.lineWidth = borderWidth / UIScreen.main.scale
         }
     }
 
+    /// The control's corner radius.
     @IBInspectable open var cornerRadius: CGFloat = 0.0 {
         didSet {
             layoutSubviews()
         }
     }
 
+    /// Dash length (in points).
     @IBInspectable open var dashLength: CGFloat = 4.0 {
         didSet {
             borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
     }
 
+    /// Space between two dashes (in points).
     @IBInspectable open var dashSpace: CGFloat = 2.0 {
         didSet {
             borderLayer.lineDashPattern = [NSNumber(value: Float(dashLength)), NSNumber(value: Float(dashSpace))]
         }
     }
 
-    let borderLayer = CAShapeLayer()
+    /// A layer, where we actually draw a dashed border.
+    private let borderLayer = CAShapeLayer()
 
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -58,6 +64,7 @@ open class DCDashedBorderedView: DCBaseView {
         addBorder()
     }
 
+    /// Adds a dashed border to the control.
     open func addBorder() {
         borderLayer.strokeColor = borderColor.cgColor
         borderLayer.fillColor = UIColor.clear.cgColor

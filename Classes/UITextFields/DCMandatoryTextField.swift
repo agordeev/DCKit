@@ -9,8 +9,7 @@
 import UIKit
 
 /// Highlights the text field if the entered value is false.
-@IBDesignable
-open class DCMandatoryTextField: DCBorderedTextField {
+@IBDesignable open class DCMandatoryTextField: DCBorderedTextField {
 
     override open var isSelected: Bool {
         didSet {
@@ -18,15 +17,15 @@ open class DCMandatoryTextField: DCBorderedTextField {
         }
     }
 
-    @IBInspectable
-    open var highlightedBorderColor: UIColor = UIColor.red {
+    /// Border color for Highlighted state.
+    @IBInspectable open var highlightedBorderColor: UIColor = UIColor.red {
         didSet {
             updateColor()
         }
     }
 
-    @IBInspectable
-    open var isMandatory: Bool = true
+    /// If `true`, `isValid()` will return `false` for the empty control.
+    @IBInspectable open var isMandatory: Bool = true
 
     // MARK: - Build control
 
@@ -36,12 +35,6 @@ open class DCMandatoryTextField: DCBorderedTextField {
         updateColor()
         let _ = isValid()
         self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
-    }
-
-    // MARK: - Build control
-
-    override open func configurePlaceholder() {
-
     }
 
     // MARK: - Validation

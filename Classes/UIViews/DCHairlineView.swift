@@ -12,7 +12,8 @@ import UIKit
 @IBDesignable
 open class DCHairlineView: UIView {
 
-    /// A color of the line. Don't use background color.
+    /// A color of the line. 
+    /// - warning: Don't use `backgroundColor` property for this.
     @IBInspectable open var color: UIColor = UIColor.black
 
     /// A width/height of the line.

@@ -25,8 +25,15 @@ import UIKit
         return valid
     }
 
-    /// Validates given email address. 
-    /// - note: The expression was taken from here: http://stackoverflow.com/questions/5428304/email-validation-on-textfield-in-iphone-sdk
+    /**
+     Validates given email address.
+
+     - note: http://stackoverflow.com/questions/5428304/email-validation-on-textfield-in-iphone-sdk
+
+     - parameter email: An entered value.
+
+     - returns: Whether the entered value is a valid email or not.
+     */
     open func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

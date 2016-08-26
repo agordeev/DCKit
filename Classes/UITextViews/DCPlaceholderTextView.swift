@@ -82,6 +82,11 @@ import UIKit
 
     // MARK: - Placeholder
 
+    /**
+     Returns a rect for a placeholder
+
+     - parameter bounds: Text view bounds.
+     */
     func placeholderRectForBounds(_ bounds: CGRect) -> CGRect {
         var rect = UIEdgeInsetsInsetRect(bounds, contentInset)
 
@@ -114,9 +119,12 @@ import UIKit
         super.draw(rect)
 
         // Draw placeholder if necessary
-        if (text as NSString).length == 0 && attributedPlaceholder != nil {
+        guard text.isEmpty else {
+            return
+        }
+        if let attributedPlaceholder = attributedPlaceholder {
             let placeholderRect = placeholderRectForBounds(bounds)
-            attributedPlaceholder!.draw(in: placeholderRect)
+            attributedPlaceholder.draw(in: placeholderRect)
         }
     }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A bse view class.
 open class DCBaseView: UIView {
 
     // MARK: - Initializers

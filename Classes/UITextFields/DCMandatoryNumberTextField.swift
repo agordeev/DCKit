@@ -9,7 +9,7 @@
 import UIKit
 
 /// Allows to set a max possible value.
-open class DCMandatoryNumberTextField: DCMandatoryTextField {
+@IBDesignable open class DCMandatoryNumberTextField: DCMandatoryTextField {
 
     /// The field's value will be compared against this property.
     /// - seealso: `isValid()`

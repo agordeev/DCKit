@@ -8,8 +8,9 @@
 
 import UIKit
 
-@IBDesignable
-open class DCCircleView: DCBorderedView {
+/// A circle UIView.
+/// - note: Make sure the view is a square on storyboard.
+@IBDesignable open class DCCircleView: DCBorderedView {
 
     // MARK: - Life cycle
 
@@ -27,6 +28,7 @@ open class DCCircleView: DCBorderedView {
         updateLayerSettings()
     }
 
+    /// Makes the view circle.
     private func updateLayerSettings() {
         layer.cornerRadius = frame.size.height*0.5
         // http://stackoverflow.com/questions/4735623/uilabel-layer-cornerradius-negatively-impacting-performance

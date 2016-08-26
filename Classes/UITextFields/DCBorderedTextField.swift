@@ -48,18 +48,36 @@ open class DCBorderedTextField: DCBaseTextField {
     }
 
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
-        return textRect(bounds)
+        if clearButtonMode == .always {
+            // rightPadding adds more space for Clear button.
+            return textRect(bounds, rightPadding: clearButtonRect(forBounds: bounds).width)
+        } else {
+            return textRect(bounds)
+        }
     }
 
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return textRect(bounds)
+        if clearButtonMode == .never || clearButtonMode == .unlessEditing {
+            return textRect(bounds)
+        } else {
+            return textRect(bounds, rightPadding: clearButtonRect(forBounds: bounds).width)
+        }
     }
 
     // MARK: - Misc
 
-    /// We use this internal func in textRectForBounds, editingRectForBounds etc. to adjust an actual rectangle according to applied corner radius
-    private func textRect(_ bounds: CGRect) -> CGRect {
-        return bounds.insetBy(dx: cornerRadius, dy: 0)
+    /**
+     We use this internal func in `textRectForBounds(_:)`, `editingRectForBounds(_:)` etc. to adjust an actual rectangle according to applied corner radius.
+
+     - parameter bounds: Bounds of the text field coming from `textRectForBounds(_:)`, `editingRectForBounds(_:)`.
+     - parameter rightPadding: If Clear button is present, we want to have a padding from the right, so text doesn't overlap with Clear button.
+
+     - returns: Adjusted bounds according to corner radius and rightPadding value.
+     */
+    private func textRect(_ bounds: CGRect, rightPadding: CGFloat = 0) -> CGRect {
+        var editingRect = bounds.insetBy(dx: cornerRadius, dy: 0)
+        editingRect.size = CGSize(width: editingRect.width - rightPadding, height: editingRect.height)
+        return editingRect
     }
 
 }

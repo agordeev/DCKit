@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DCKitSample  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="DCKitSample  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">DCKitSample Docs</a> (0% documented)</p>
+        <p class="header-right"><a href="https://github.com/andrew8712/DCKit/"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">DCKitSample Reference</a>
+        <img id="carat" src="img/carat.png" />
+        DCKitSample  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#dckit' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='dckit'>DCKit</h1>
+
+<p><a href="http://cocoapods.org/pods/DCKit"><img src="https://img.shields.io/cocoapods/v/DCKit.svg?style=flat" alt="Version"></a>
+<a href="https://travis-ci.org/andrew8712/DCKit"><img src="https://travis-ci.org/andrew8712/DCKit.svg?branch=master" alt="Build Status"></a>
+<a href="http://cocoapods.org/pods/DCKit"><img src="https://img.shields.io/cocoapods/l/DCKit.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/DCKit"><img src="https://img.shields.io/cocoapods/p/DCKit.svg?style=flat" alt="Platform"></a></p>
+
+<p>DCKit is a set of <em>@IBDesignable</em> iOS controls (<code>UIButtons</code>, <code>UITextFields</code> etc.), which have useful <em>@IBInspectable</em> properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.</p>
+
+<p>Written on Swift.</p>
+<a href='#preview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='preview'>Preview</h2>
+
+<p><a href="Images/screenshot_001.png"><img src="Images/screenshot_001.png" alt="DCKit preview"></a></p>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>Cocoapods</h3>
+
+<p><a href="http://www.cocoapods.org">CocoaPods</a> recommended to use DCKit.</p>
+
+<p>1.1. For Swift 2.3 and below: Add <code>pod &#39;DCKit&#39;</code> to your <em>Podfile</em>.</p>
+
+<p>1.2. For Swift 3: Add <code>pod &#39;DCKit&#39;, :git =&gt; &#39;https://github.com/andrew8712/DCKit.git&#39;</code> to your <em>Podfile</em>. </p>
+
+<ol>
+<li><p>Add <code>use_frameworks!</code> keyword to your <em>Podfile</em>. The library is written on Swift, so this is a mandatory.</p></li>
+<li><p>Install the pod(s) by running <code>pod install</code>.</p></li>
+</ol>
+<a href='#source-files' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='source-files'>Source files</h3>
+
+<ol>
+<li>Download the <a href="https://github.com/andrew8712/DCKit/archive/master.zip">latest code version</a> or add the repository as a git submodule to your git-tracked project.</li>
+<li>Drag and drop the <strong>Classes</strong> directory from the archive in your project navigator. Make sure to select <em>Copy items</em> when asked if you extracted the code archive outside of your project.</li>
+</ol>
+<a href='#how-to-use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='how-to-use'>How to use</h2>
+
+<ol>
+<li>Add a control (e.g. <code>UIButton</code>) onto storyboard:
+<a href="Images/screenshot_002.png"><img src="Images/screenshot_002.png" alt="Add a control (e.g. UIButton) onto storyboard"></a></li>
+<li>Change the button&rsquo;s class to <code>DCBorderedButton</code>. Also change module to <code>DCKit</code> if you&rsquo;ve installed the library via CocoaPods. You&rsquo;ll notice a border appeared around the button:
+<a href="Images/screenshot_003.png"><img src="Images/screenshot_003.png" alt="Change the button&#39;s class to DCBorderedButton"></a></li>
+<li>Now you&rsquo;re able to customize the button from IB directly:
+<a href="Images/screenshot_004.png"><img src="Images/screenshot_004.png" alt="Now you&#39;re able to customize the button from IB directly"></a></li>
+</ol>
+
+<p>Please download the <a href="https://github.com/andrew8712/DCKit/archive/master.zip">latest code version</a> and run <code>DCKitSample.xcodeproj</code> to test out all the features it offers.</p>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+
+<p>Basically, all of the classes are pretty straightforward and don&rsquo;t worth describing. Most of them you can see in the demo project.</p>
+
+<p>I&rsquo;ll describe a few of them here though.</p>
+<a href='#dchairlineview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='dchairlineview'>DCHairlineView</h4>
+
+<p>Very useful control, I widely use it in my projects as a separator between views.</p>
+<a href='#dcmandatorytextfield' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='dcmandatorytextfield'>DCMandatoryTextField</h4>
+
+<p>Base text field for all the mandatory text fields. Highlights the text field if the entered value is false.</p>
+
+<p>By default it considers the empty value as invalid. You can override this behaviour by subclassing this class and overriding <code>isValid</code> method.</p>
+<a href='#dcmandatoryemailtextfield' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='dcmandatoryemailtextfield'>DCMandatoryEmailTextField</h4>
+
+<p>This field is also checks if the entered value is a valid email address. It uses a regexp taken from here: <a href="http://stackoverflow.com/questions/5428304/email-validation-on-textfield-in-iphone-sdk">http://stackoverflow.com/questions/5428304/email-validation-on-textfield-in-iphone-sdk</a></p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>Xcode 6-7</li>
+<li>iOS 8</li>
+<li>ARC</li>
+</ul>
+<a href='#author' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='author'>Author</h2>
+
+<p><a href="http://stackoverflow.com/users/1321917/andrey-gordeev">Andrey Gordeev</a></p>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>This project is under MIT license. For more information, see <code>LICENSE</code> file.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>2014-present © Andrey Gordeev. See LICENSE for more details.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

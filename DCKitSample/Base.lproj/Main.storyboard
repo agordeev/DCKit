@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0dB-Sc-Mhj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0dB-Sc-Mhj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -28,7 +28,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-nm-Qeo" customClass="DCRoundedButton" customModule="DCKitSample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3f-nm-Qeo" customClass="DCRoundedButton" customModule="DCKit">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="160" id="BPg-R4-Frj"/>
                                                     <constraint firstAttribute="height" constant="40" id="U0Y-3i-DSR"/>
@@ -42,7 +42,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKitSample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O89-Mq-UHG" customClass="DCBorderedButton" customModule="DCKit">
                                                 <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                                 <state key="normal" title="Bordered Button">
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,14 +73,14 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bordered text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-fC-W00" customClass="DCBorderedTextField" customModule="DCKitSample" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bordered text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOe-fC-W00" customClass="DCBorderedTextField" customModule="DCKit">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="ef2-6H-xoQ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Nd-eBz" customClass="DCMandatoryTextField" customModule="DCKitSample" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Nd-eBz" customClass="DCMandatoryTextField" customModule="DCKit">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="IVS-d3-5wq"/>
                                                 </constraints>
@@ -90,14 +90,14 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showDoneButton" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory email text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-LX-B6C" customClass="DCMandatoryEmailTextField" customModule="DCKitSample" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory email text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKQ-LX-B6C" customClass="DCMandatoryEmailTextField" customModule="DCKit">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="NeD-ve-2Tl"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory number text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-Yy-Wy9" customClass="DCMandatoryNumberTextField" customModule="DCKitSample" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mandatory number text field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAf-Yy-Wy9" customClass="DCMandatoryNumberTextField" customModule="DCKit">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="hPt-kn-Nmt"/>
                                                 </constraints>
@@ -132,7 +132,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-m0-fh6" customClass="DCPlaceholderTextView" customModule="DCKitSample" customModuleProvider="target">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Gk-m0-fh6" customClass="DCPlaceholderTextView" customModule="DCKit">
                                                 <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="6v5-SD-VJ9"/>
@@ -146,7 +146,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bordered text view" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-vn-0dn" customClass="DCBorderedTextView" customModule="DCKitSample" customModuleProvider="target">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Bordered text view" translatesAutoresizingMaskIntoConstraints="NO" id="gAw-vn-0dn" customClass="DCBorderedTextView" customModule="DCKit">
                                                 <color key="backgroundColor" red="0.86806126640000003" green="0.97829290020000004" blue="0.84264494239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="QWy-fi-X7d"/>
@@ -187,7 +187,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4B-fZ-WLa" customClass="DCBorderedView" customModule="DCKitSample" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4B-fZ-WLa" customClass="DCBorderedView" customModule="DCKit">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bordered view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQH-5T-ATg">
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -212,7 +212,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-rt-Uw9" customClass="DCDashedBorderedView" customModule="DCKitSample" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-rt-Uw9" customClass="DCDashedBorderedView" customModule="DCKit">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashed view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88q-9P-4Aa">
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -243,7 +243,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-I0-8NR" customClass="DCCircleView" customModule="DCKitSample" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-I0-8NR" customClass="DCCircleView" customModule="DCKit">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-cp-Nnq">
                                                         <string key="text">Circle 
@@ -268,7 +268,7 @@ view</string>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-NM-a1v" customClass="DCHairlineView" customModule="DCKitSample" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-NM-a1v" customClass="DCHairlineView" customModule="DCKit">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="9bH-CR-GHP"/>

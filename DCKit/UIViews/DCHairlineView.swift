@@ -22,6 +22,19 @@ open class DCHairlineView: UIView {
     /// True if we want to draw the horizontal line. False for vertical line.
     @IBInspectable open var horizontal: Bool = true
 
+    // MARK: - Initializers
+
+    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
+    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
+
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     // MARK: - Life cycle
 
     open override func draw(_ rect: CGRect) {

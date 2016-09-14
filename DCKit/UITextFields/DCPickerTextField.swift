@@ -12,6 +12,19 @@ import UIKit
 /// It has Select/Paste menu disabled, as well as zoom functionality and blinking cursor
 @IBDesignable open class DCPickerTextField: DCBorderedTextField {
 
+    // MARK: - Initializers
+
+    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
+    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
+
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     // MARK: - Building control
 
     override open func customInit() {

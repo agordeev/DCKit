@@ -11,6 +11,19 @@ import UIKit
 /// Allows to set a max possible value.
 @IBDesignable open class DCMandatoryNumberTextField: DCMandatoryTextField {
 
+    // MARK: - Initializers
+
+    // IBDesignables require both of these inits, otherwise we'll get an error: IBDesignable View Rendering times out.
+    // http://stackoverflow.com/questions/26772729/ibdesignable-view-rendering-times-out
+
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     /// The field's value will be compared against this property.
     /// - seealso: `isValid()`
     @IBInspectable open var maxValue: Float = 999

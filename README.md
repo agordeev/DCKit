@@ -19,14 +19,11 @@ Written on Swift.
 
 [CocoaPods](http://www.cocoapods.org) recommended to use DCKit.
 
-1.1. For Swift 3: Add `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'` to your *Podfile*. 
-
-1.2. For Swift 2.3: Add `pod 'DCKit'` to your *Podfile*.
-
-1.3. For Swift 2.2 and below: Add `pod 'DCKit'` to your *Podfile*.
-
+1. Add `pod` record to your *Podfile:*
+  * **Swift 3**: `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'`
+  * **Swift 2.3**: `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git', :branch => 'swift23'`
+  * **Swift 2.2** and below: `pod 'DCKit', '<= 1.0.4'`
 2. Add `use_frameworks!` keyword to your *Podfile*. The library is written on Swift, so this is a mandatory.
-
 3. Install the pod(s) by running `pod install`.
 
 ### Source files

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = "DCKit"
-  s.version     = "1.0.5"
+  s.version     = "1.0.6"
   s.summary     = "Set of iOS controls, which have useful IBInspectable properties. Written on Swift."
   s.homepage    = "https://github.com/andrew8712/DCKit"
   s.license     = { :type => "MIT" }
@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = "8.0"
   s.source   = { :git => "https://github.com/andrew8712/DCKit.git", :tag => s.version.to_s}
-  s.source_files = "Classes/**/*.swift"
+  s.source_files = "DCKit/**/*.swift"
 end

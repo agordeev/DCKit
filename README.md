@@ -19,9 +19,11 @@ Written on Swift.
 
 [CocoaPods](http://www.cocoapods.org) recommended to use DCKit.
 
-1.1. For Swift 2.3 and below: Add `pod 'DCKit'` to your *Podfile*.
+1.1. For Swift 3: Add `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'` to your *Podfile*. 
 
-1.2. For Swift 3: Add `pod 'DCKit', :git => 'https://github.com/andrew8712/DCKit.git'` to your *Podfile*. 
+1.2. For Swift 2.3: Add `pod 'DCKit'` to your *Podfile*.
+
+1.3. For Swift 2.2 and below: Add `pod 'DCKit'` to your *Podfile*.
 
 2. Add `use_frameworks!` keyword to your *Podfile*. The library is written on Swift, so this is a mandatory.
 
@@ -65,9 +67,9 @@ This field is also checks if the entered value is a valid email address. It uses
 
 ## Requirements
 
-* Xcode 6-7
-* iOS 8
-* ARC
+* Xcode 6 or above
+* iOS 8 or above
+* Swift 2.0 and above
 
 ## Author
 

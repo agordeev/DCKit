@@ -9,7 +9,7 @@ DCKit is a set of *@IBDesignable* iOS controls (`UIButtons`, `UITextFields` etc.
 
 Written on Swift.
 
-##Preview
+## Preview
 
 [![DCKit preview](Images/screenshot_001.png)](Images/screenshot_001.png)
 

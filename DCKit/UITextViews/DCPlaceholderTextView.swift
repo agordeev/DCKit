@@ -27,7 +27,7 @@ import UIKit
 //            }
 //            else {
                 attributes[NSFontAttributeName] = font
-                attributes[NSForegroundColorAttributeName] = UIColor(white: 0.702, alpha: 1.0)
+                attributes[NSForegroundColorAttributeName] = UIColor(colorLiteralRed: 0, green: 0, blue: 0.0980392, alpha: 0.22)
 //            }
 
             if textAlignment != NSTextAlignment.left {

@@ -19,21 +19,21 @@ import UIKit
                 return
             }
 
-            var attributes = [String : AnyObject]()
+            var attributes = [NSAttributedStringKey: Any]()
             // This was in the original SAMTextView, but I really don't understand, why this is needed.
             // This makes placeholder appear as entered text, which seems wrong, so I commented it out.
 //            if isFirstResponder() && (typingAttributes != nil) {
 //                attributes.addEntriesFromDictionary(typingAttributes)
 //            }
 //            else {
-                attributes[NSFontAttributeName] = font
-                attributes[NSForegroundColorAttributeName] = UIColor(colorLiteralRed: 0, green: 0, blue: 0.0980392, alpha: 0.22)
+                attributes[NSAttributedStringKey.font] = font
+                attributes[NSAttributedStringKey.foregroundColor] = UIColor(red: 0, green: 0, blue: 0.0980392, alpha: 0.22)
 //            }
 
             if textAlignment != NSTextAlignment.left {
                 let paragraph = NSMutableParagraphStyle()
                 paragraph.alignment = textAlignment
-                attributes[NSParagraphStyleAttributeName] = paragraph
+                attributes[NSAttributedStringKey.paragraphStyle] = paragraph
             }
 
             attributedPlaceholder = NSAttributedString(string: newValue ?? "", attributes: attributes)
@@ -44,6 +44,7 @@ import UIKit
     }
 
     /// The attributed string that is displayed when there is no other text in the text view.
+    //swiftlint:disable valid_ibinspectable
     @IBInspectable open var attributedPlaceholder: NSAttributedString? {
         didSet {
             setNeedsDisplay()
@@ -106,13 +107,13 @@ import UIKit
         if responds(to: #selector(getter: UITextView.textContainer)) {
             rect = UIEdgeInsetsInsetRect(rect, textContainerInset)
             let padding = textContainer.lineFragmentPadding
-            rect.origin.x = rect.origin.x + padding
-            rect.size.width = rect.size.width - padding * 2.0
+            rect.origin.x += padding
+            rect.size.width -= padding * 2.0
         } else {
             if contentInset.left == 0.0 {
-                rect.origin.x = rect.origin.x + 8.0
+                rect.origin.x += 8.0
             }
-            rect.origin.y = rect.origin.y + 8.0
+            rect.origin.y += 8.0
         }
 
         return rect

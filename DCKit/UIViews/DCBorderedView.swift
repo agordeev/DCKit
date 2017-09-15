@@ -68,5 +68,4 @@ import UIKit
         layer.shouldRasterize = true
     }
 
-
 }

@@ -46,7 +46,7 @@ import UIKit
         super.customInit()
 
         updateColor()
-        let _ = isValid()
+        _ = isValid()
         self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
     }
 
@@ -57,7 +57,7 @@ import UIKit
 
      - returns: True, if the field is mandatory and value is not empty.
      */
-    open func isValid() -> Bool {
+    @objc open func isValid() -> Bool {
         if isMandatory {
             let valid = !(text ?? "").isEmpty
             isSelected = !valid

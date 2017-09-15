@@ -47,7 +47,6 @@ import UIKit
         super.addGestureRecognizer(gestureRecognizer)
     }
 
-
     /**
      Disables copy/cut/paste/select all menu.
 

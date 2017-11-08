@@ -69,7 +69,7 @@ import UIKit
 
     // MARK: - Misc
 
-    func updateColor() {
+    open func updateColor() {
         layer.borderColor = isSelected ? highlightedBorderColor.cgColor : normalBorderColor.cgColor
     }
 

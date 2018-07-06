@@ -39,22 +39,29 @@ import UIKit
         }
     }
 
-    /// Text color for Normal state.
+    /// Background color for Normal state.
     @IBInspectable open var normalBackgroundColor: UIColor = UIColor.white {
         didSet {
             updateColor()
         }
     }
 
-    /// Text color for Disabled state.
+    /// Background color for Disabled state.
     @IBInspectable open var disabledBackgroundColor: UIColor = UIColor.white {
         didSet {
             updateColor()
         }
     }
 
-    /// Text color for Selected state.
+    /// Background color for Selected state.
     @IBInspectable open var selectedBackgroundColor: UIColor = UIColor(red: 37.0/255.0, green: 147.0/255.0, blue: 1.0/255.0, alpha: 1.0) {
+        didSet {
+            updateColor()
+        }
+    }
+
+    /// Background color for Highlighted state.
+    @IBInspectable open var highlightedBackgroundColor: UIColor = UIColor.white.withAlphaComponent(0.4) {
         didSet {
             updateColor()
         }
@@ -67,6 +74,12 @@ import UIKit
     }
 
     override open var isSelected: Bool {
+        didSet {
+            updateColor()
+        }
+    }
+
+    override open var isHighlighted: Bool {
         didSet {
             updateColor()
         }
@@ -106,7 +119,13 @@ import UIKit
 
     /// Updates button's background color. Gets called after any of [state]BackgroundColor property was changed.
     open func updateColor() {
-        backgroundColor = isEnabled ? (isSelected ? selectedBackgroundColor : normalBackgroundColor) : disabledBackgroundColor
+        if isHighlighted {
+            backgroundColor = highlightedBackgroundColor
+        } else if !isEnabled {
+            backgroundColor = disabledBackgroundColor
+        } else {
+            backgroundColor = isSelected ? selectedBackgroundColor : normalBackgroundColor
+        }
     }
 
 }

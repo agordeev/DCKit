@@ -61,7 +61,7 @@ import UIKit
     }
 
     /// Background color for Highlighted state.
-    @IBInspectable open var highlightedBackgroundColor: UIColor = UIColor.white.withAlphaComponent(0.4) {
+    @IBInspectable open var highlightedBackgroundColor: UIColor? {
         didSet {
             updateColor()
         }
@@ -119,7 +119,7 @@ import UIKit
 
     /// Updates button's background color. Gets called after any of [state]BackgroundColor property was changed.
     open func updateColor() {
-        if isHighlighted {
+        if isHighlighted && highlightedBackgroundColor != nil {
             backgroundColor = highlightedBackgroundColor
         } else if !isEnabled {
             backgroundColor = disabledBackgroundColor

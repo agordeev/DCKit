@@ -9,43 +9,30 @@
 import UIKit
 
 /// UITextView subclass that adds placeholder support like UITextField has. Swift version of https://github.com/soffes/SAMTextView/tree/master/SAMTextView
-@IBDesignable open class DCPlaceholderTextView: DCBorderedTextView {
+@IBDesignable
+open class DCPlaceholderTextView: DCBorderedTextView {
 
     /// The string that is displayed when there is no other text in the text view.
     /// This property reads and writes the attributed variant.
-    @IBInspectable open var placeholder: String? {
+    @IBInspectable
+    open var placeholder: String? {
         set {
-            if newValue == self.attributedPlaceholder?.string {
-                return
-            }
-
-            var attributes = [NSAttributedStringKey: Any]()
-            // This was in the original SAMTextView, but I really don't understand, why this is needed.
-            // This makes placeholder appear as entered text, which seems wrong, so I commented it out.
-//            if isFirstResponder() && (typingAttributes != nil) {
-//                attributes.addEntriesFromDictionary(typingAttributes)
-//            }
-//            else {
-                attributes[NSAttributedStringKey.font] = font
-                attributes[NSAttributedStringKey.foregroundColor] = UIColor(red: 0, green: 0, blue: 0.0980392, alpha: 0.22)
-//            }
-
-            if textAlignment != NSTextAlignment.left {
-                let paragraph = NSMutableParagraphStyle()
-                paragraph.alignment = textAlignment
-                attributes[NSAttributedStringKey.paragraphStyle] = paragraph
-            }
-
-            attributedPlaceholder = NSAttributedString(string: newValue ?? "", attributes: attributes)
+            updateAttributedPlaceholder(value: newValue)
         }
         get {
             return self.attributedPlaceholder?.string
         }
     }
 
+    @IBInspectable
+    open var placeholderColor: UIColor = UIColor(red: 0, green: 0, blue: 0.0980392, alpha: 0.22) {
+        didSet {
+            updateAttributedPlaceholder(value: placeholder)
+        }
+    }
+
     /// The attributed string that is displayed when there is no other text in the text view.
-    //swiftlint:disable valid_ibinspectable
-    @IBInspectable open var attributedPlaceholder: NSAttributedString? {
+    open var attributedPlaceholder: NSAttributedString? {
         didSet {
             setNeedsDisplay()
         }
@@ -95,6 +82,20 @@ import UIKit
     }
 
     // MARK: - Placeholder
+
+    private func updateAttributedPlaceholder(value: String?) {
+        var attributes = [NSAttributedStringKey: Any]()
+        attributes[NSAttributedStringKey.font] = font
+        attributes[NSAttributedStringKey.foregroundColor] = placeholderColor
+
+        if textAlignment != NSTextAlignment.left {
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.alignment = textAlignment
+            attributes[NSAttributedStringKey.paragraphStyle] = paragraph
+        }
+
+        attributedPlaceholder = NSAttributedString(string: value ?? "", attributes: attributes)
+    }
 
     /**
      Returns a rect for a placeholder

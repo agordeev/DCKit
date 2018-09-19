@@ -84,14 +84,14 @@ open class DCPlaceholderTextView: DCBorderedTextView {
     // MARK: - Placeholder
 
     private func updateAttributedPlaceholder(value: String?) {
-        var attributes = [NSAttributedStringKey: Any]()
-        attributes[NSAttributedStringKey.font] = font
-        attributes[NSAttributedStringKey.foregroundColor] = placeholderColor
+        var attributes = [NSAttributedString.Key: Any]()
+        attributes[.font] = font
+        attributes[.foregroundColor] = placeholderColor
 
         if textAlignment != NSTextAlignment.left {
             let paragraph = NSMutableParagraphStyle()
             paragraph.alignment = textAlignment
-            attributes[NSAttributedStringKey.paragraphStyle] = paragraph
+            attributes[.paragraphStyle] = paragraph
         }
 
         attributedPlaceholder = NSAttributedString(string: value ?? "", attributes: attributes)
@@ -103,10 +103,10 @@ open class DCPlaceholderTextView: DCBorderedTextView {
      - parameter bounds: Text view bounds.
      */
     func placeholderRectForBounds(_ bounds: CGRect) -> CGRect {
-        var rect = UIEdgeInsetsInsetRect(bounds, contentInset)
+        var rect = bounds.inset(by: contentInset)
 
         if responds(to: #selector(getter: UITextView.textContainer)) {
-            rect = UIEdgeInsetsInsetRect(rect, textContainerInset)
+            rect = rect.inset(by: textContainerInset)
             let padding = textContainer.lineFragmentPadding
             rect.origin.x += padding
             rect.size.width -= padding * 2.0
@@ -125,7 +125,7 @@ open class DCPlaceholderTextView: DCBorderedTextView {
     open override func customInit() {
         super.customInit()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: NSNotification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(DCPlaceholderTextView.textChanged), name: UITextView.textDidChangeNotification, object: self)
     }
 
     // MARK: - Misc
@@ -154,7 +154,7 @@ open class DCPlaceholderTextView: DCBorderedTextView {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: self)
     }
 
 }

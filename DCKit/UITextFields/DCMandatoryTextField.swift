@@ -47,7 +47,7 @@ import UIKit
 
         updateColor()
         _ = isValid()
-        self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControlEvents.editingChanged)
+        self.addTarget(self, action: #selector(DCMandatoryTextField.isValid), for: UIControl.Event.editingChanged)
     }
 
     // MARK: - Validation

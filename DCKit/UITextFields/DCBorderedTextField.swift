@@ -50,7 +50,7 @@ import UIKit
     override open func customInit() {
         super.customInit()
 
-        borderStyle = UITextBorderStyle.none
+        borderStyle = .none
         cornerRadius = 6.0
         borderWidth = 1.0
 

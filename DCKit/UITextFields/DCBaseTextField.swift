@@ -15,7 +15,7 @@ import UIKit
     @IBInspectable open var placeholderColor: UIColor = UIColor(white: 0.7, alpha: 1.0) {
         didSet {
             if let placeholder = placeholder {
-                attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedStringKey.foregroundColor: placeholderColor, NSAttributedStringKey.font: font!])
+                attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: placeholderColor, .font: font!])
             }
         }
     }

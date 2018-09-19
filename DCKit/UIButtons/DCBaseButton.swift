@@ -14,28 +14,28 @@ import UIKit
     /// Text color for Normal state.
     @IBInspectable open var normalTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(normalTextColor, for: UIControlState())
+            setTitleColor(normalTextColor, for: UIControl.State())
         }
     }
 
     /// Text color for Disabled state.
     @IBInspectable open var disabledTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(disabledTextColor, for: UIControlState.disabled)
+            setTitleColor(disabledTextColor, for: .disabled)
         }
     }
 
     /// Text color for Selected state.
     @IBInspectable open var selectedTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(selectedTextColor, for: UIControlState.selected)
+            setTitleColor(selectedTextColor, for: .selected)
         }
     }
 
     /// Text color for Highlighted state.
     @IBInspectable open var highlightedTextColor: UIColor = UIColor.lightGray {
         didSet {
-            setTitleColor(highlightedTextColor, for: UIControlState.highlighted)
+            setTitleColor(highlightedTextColor, for: .highlighted)
         }
     }
 

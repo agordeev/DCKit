@@ -1,11 +1,10 @@
 # DCKit
 
 [![Version](https://img.shields.io/cocoapods/v/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
-[![Build Status](https://travis-ci.org/agordeev/DCKit.svg?branch=master)](https://travis-ci.org/agordeev/DCKit)
 [![License](https://img.shields.io/cocoapods/l/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
 [![Platform](https://img.shields.io/cocoapods/p/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
 
-DCKit is a set of *@IBDesignable* iOS controls (`UIButtons`, `UITextFields` etc.), which have useful *@IBInspectable* properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.
+DCKit is a set of *@IBDesignable* iOS controls (buttons, text fields, text views, labels, circle views, hairline views etc.), which have useful *@IBInspectable* properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.
 
 Written on Swift.
 
@@ -20,7 +19,8 @@ Written on Swift.
 [CocoaPods](http://www.cocoapods.org) recommended to use DCKit.
 
 1. Add `pod` record to your *Podfile:*
-  * **Swift 3**: `pod 'DCKit', :git => 'https://github.com/agordeev/DCKit.git'`
+  * **Swift 4.2 and above**: `pod 'DCKit'`
+  * **Swift 3 and Swift 4**: `pod 'DCKit', '<= 1.0.11'`
   * **Swift 2.3**: `pod 'DCKit', :git => 'https://github.com/agordeev/DCKit.git', :branch => 'swift23'`
   * **Swift 2.2** and below: `pod 'DCKit', '<= 1.0.4'`
 2. Add `use_frameworks!` keyword to your *Podfile*. The library is written on Swift, so this is a mandatory.

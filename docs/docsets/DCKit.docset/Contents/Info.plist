@@ -3,11 +3,11 @@
 <plist version="1.0">
   <dict>
     <key>CFBundleIdentifier</key>
-      <string>com.jazzy.dckitsample</string>
+      <string>com.jazzy.dckit</string>
     <key>CFBundleName</key>
-      <string>DCKitSample</string>
+      <string>DCKit</string>
     <key>DocSetPlatformFamily</key>
-      <string>dckitsample</string>
+      <string>dckit</string>
     <key>isDashDocset</key>
       <true/>
     <key>dashIndexFilePath</key>

@@ -61,4 +61,10 @@ import UIKit
         return false
     }
 
+    /// Turns out this is more efficient for hiding a blinking cursor than setting `tintColor` to .clear.
+    /// Setting `tintColor` doesn't work when `UITextField.appearance().tintColor` is set.
+    open override func caretRect(for position: UITextPosition) -> CGRect {
+        return .zero
+    }
+
 }

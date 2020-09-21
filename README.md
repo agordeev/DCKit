@@ -4,6 +4,12 @@
 [![License](https://img.shields.io/cocoapods/l/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
 [![Platform](https://img.shields.io/cocoapods/p/DCKit.svg?style=flat)](http://cocoapods.org/pods/DCKit)
 
+[Not maintained anymore]
+
+**I switched to Flutter, so I don't maintain the library anymore.**
+
+---
+
 DCKit is a set of *@IBDesignable* iOS controls (buttons, text fields, text views, labels, circle views, hairline views etc.), which have useful *@IBInspectable* properties. They allows you to build a nice screens, see a result directly on Xcode Interface Builder.
 
 Written on Swift.
